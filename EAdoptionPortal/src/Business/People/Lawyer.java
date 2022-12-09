@@ -6,7 +6,7 @@ package Business.People;
 
 
 import Business.WorkQueue.BirthMotherLawyer;
-import Business.WorkQueue.ParentsToLawyer;
+import Business.WorkQueue.CounsellorsToLawyer;
 import java.time.LocalTime;
 import java.util.ArrayList;
 
@@ -20,9 +20,9 @@ public class Lawyer extends Employees{
    private boolean isAvailable;
    private LocalTime availableTime;
    private ArrayList<BirthMotherLawyer> birthMotherAlloted;
-   private ArrayList<ParentsToLawyer> parentsAlloted;
+   private ArrayList<CounsellorsToLawyer> parentsAlloted;
 
-    public Lawyer(int ratingReviews, boolean isAvailable, LocalTime availableTime, ArrayList<BirthMotherLawyer> bMA, ArrayList<ParentsToLawyer> pA) {
+    public Lawyer(int ratingReviews, boolean isAvailable, LocalTime availableTime, ArrayList<BirthMotherLawyer> bMA, ArrayList<CounsellorsToLawyer> pA) {
         super();
         this.ratingReviews = ratingReviews;
         this.isAvailable = isAvailable;
@@ -36,7 +36,7 @@ public class Lawyer extends Employees{
         this.isAvailable = true;
         this.availableTime = LocalTime.MIN;
         this.birthMotherAlloted = new ArrayList<BirthMotherLawyer>();
-        this.parentsAlloted = new ArrayList<ParentsToLawyer>();
+        this.parentsAlloted = new ArrayList<CounsellorsToLawyer>();
     
     
     }
@@ -80,11 +80,11 @@ public class Lawyer extends Employees{
         this.birthMotherAlloted = birthMotherAlloted;
     }
 
-    public ArrayList<ParentsToLawyer> getParentsAlloted() {
+    public ArrayList<CounsellorsToLawyer> getParentsAlloted() {
         return parentsAlloted;
     }
 
-    public void setParentsAlloted(ArrayList<ParentsToLawyer> parentsAlloted) {
+    public void setParentsAlloted(ArrayList<CounsellorsToLawyer> parentsAlloted) {
         this.parentsAlloted = parentsAlloted;
     }
 }

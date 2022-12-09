@@ -20,7 +20,7 @@ public class CounsellorRole extends Role{
 
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAcc account, Organization organization, Enterprise enterprise, EcoSystem business) {
-        return new CounselorWorkAreaJPanel(userProcessContainer, account, organization, enterprise);
+        return new CounselorWorkAreaJPanel(userProcessContainer, account, organization, enterprise,business);
     }
     
     
