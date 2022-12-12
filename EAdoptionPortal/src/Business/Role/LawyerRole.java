@@ -10,6 +10,7 @@ import Business.Organization.Organization;
 import Business.UserAccount.UserAcc;
 import javax.swing.JPanel;
 import userinterface.CounselorRole.CounselorWorkAreaJPanel;
+import userinterface.LawyerRole.LawyerWorkAreaJPanel;
 
 /**
  *
@@ -18,6 +19,6 @@ import userinterface.CounselorRole.CounselorWorkAreaJPanel;
 public class LawyerRole extends Role {
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAcc account, Organization organization, Enterprise enterprise, EcoSystem business) {
-        return new CounselorWorkAreaJPanel(userProcessContainer, account, organization, enterprise);
+        return new LawyerWorkAreaJPanel(userProcessContainer, account, organization, enterprise);
     }
 }

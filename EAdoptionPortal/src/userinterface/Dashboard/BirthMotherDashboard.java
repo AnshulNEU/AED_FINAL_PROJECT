@@ -50,9 +50,14 @@ public class BirthMotherDashboard extends javax.swing.JPanel {
     
         //Pie chart
     public void chart(){
+        int parent;
         try{
         int self = BirthMother.getOwnFunds();
-        int parent = BirthMother.getParentAidfund()- this.parent.getRemainingFunds();
+        if(BirthMother.getFinalizedParent() != null){
+            parent = BirthMother.getParentAidfund() - this.parent.getRemainingFunds();
+            
+        }
+        else { parent = 0;}
         int help;
         int loan = BirthMother.getLoanAmountApproved();
         int insurance = BirthMother.getInsuranceAmount();

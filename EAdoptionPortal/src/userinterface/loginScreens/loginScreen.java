@@ -154,17 +154,13 @@ public class loginScreen extends javax.swing.JPanel {
                 }
             }
         } else  if (type.getValue().equals(type.LawyerAdmin.getValue())){
-            JOptionPane.showMessageDialog(null, "Loopo");
             if(userAccount==null){
                 //Step 2: Go inside each network and check each enterprise
                 for(Networking network:system.getNetworkList()){
                     //Step 2.a: check against each enterprise
-                    JOptionPane.showMessageDialog(null, "Loopo1");
                     for(Enterprise enterprise:network.getEnterpriseDirectory().getEnterpriseList()){
-                        JOptionPane.showMessageDialog(null, "Loopo2");
                         userAccount=enterprise.getUserAccountDirectory().authenticateUser(userName, password);
                         if(userAccount!=null){
-                            JOptionPane.showMessageDialog(null, "Loopo3");
                                    inEnterprise=enterprise;
                                    break;
                         }  

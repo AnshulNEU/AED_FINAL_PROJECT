@@ -25,11 +25,13 @@ public class WorkQ {
     private ArrayList<OrphanageToCounsellor> orphanageToCounselor;
     private ArrayList<OrphanageToLawyer> orphanageToLawyer;
     private ArrayList<LawyerToAdmin> lawyerToAdmin;
+    private ArrayList<CounsellorsToLawyer> counselorToLawyer;
     
     public WorkQ() {
         birthMotherToCounselor = new ArrayList();
         parentToCounselor = new ArrayList();
         counselorToAdmin = new ArrayList();
+        counselorToLawyer = new ArrayList();
         birthMotherToParent =  new ArrayList();
         birthMotherToLoan = new ArrayList();
         hospitalAdminToBank = new ArrayList<>();
@@ -85,7 +87,9 @@ public class WorkQ {
     public ArrayList<OrphanageToCounsellor> getOrphanageToCounselor() {
         return orphanageToCounselor;
     }
-
+    public ArrayList<CounsellorsToLawyer> getCounselorToLawyer() {
+        return counselorToLawyer;
+    }
     public void setOrphanageToCounselor(ArrayList<OrphanageToCounsellor> orphanageToCounselor) {
         this.orphanageToCounselor = orphanageToCounselor;
     }

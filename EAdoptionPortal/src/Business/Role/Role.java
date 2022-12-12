@@ -24,7 +24,8 @@ public abstract class Role {
         HospitalAdmin ("HospitalAdmin"),
         BirthMotherRole("BirthMother"),
         ParentsRole("Parents"),
-        LawyerRole("Lawyer");
+        LawyerRole("Lawyer"),
+        LawyerAdminRole("LegalAdmin");
         
         private String value;
         private RoleType(String value){

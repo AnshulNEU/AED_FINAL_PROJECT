@@ -26,9 +26,9 @@ public class EmailGenerator {
 
     public EmailGenerator(String to, String message, String sub) {
         this.to = to;
-        this.from = "taskplannermernproject@gmail.com";
+        this.from = "aedprojectemail@gmail.com";
         this.textBody = message;
-        this.password = "taskplannermernproject@123";
+        this.password = "rxurhwinygfdelzz"; 
         this.subject = sub;
         
     }
