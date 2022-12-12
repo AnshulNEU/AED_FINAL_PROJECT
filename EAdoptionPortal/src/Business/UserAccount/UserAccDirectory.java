@@ -20,20 +20,20 @@ import java.util.ArrayList;
  */
 public class UserAccDirectory {
     
-    private ArrayList<UserAcc> userAccountList;
+    private ArrayList<UserAcc> userAccList;
 
     public UserAccDirectory() {
-        userAccountList = new ArrayList();
+        userAccList = new ArrayList();
     }
 
-    public ArrayList<UserAcc> getUserAccountList() {
-        return userAccountList;
+    public ArrayList<UserAcc> getUserAccList() {
+        return userAccList;
     }
     
     public UserAcc authenticateUser(String username, String password){
-        for (UserAcc ua : userAccountList)
-            if (ua.getUsername().equals(username) && ua.getPassword().equals(password)){
-                return ua;
+        for (UserAcc userAcc: userAccList)
+            if (userAcc.getUsername().equals(username) && userAcc.getPassword().equals(password)){
+                return userAcc;
             }
         return null;
     }
@@ -45,7 +45,7 @@ public class UserAccDirectory {
         userAccount.setEmployee(employee);
   
         userAccount.setRole(role);
-        userAccountList.add(userAccount);
+        userAccList.add(userAccount);
         return userAccount;
     }
     
@@ -56,7 +56,7 @@ public class UserAccDirectory {
         userAccount.setEmployee(employee);
         userAccount.setNetwork(network);
         userAccount.setRole(role);
-        userAccountList.add(userAccount);
+        userAccList.add(userAccount);
         return userAccount;
     }
     
@@ -67,7 +67,7 @@ public class UserAccDirectory {
         userAccount.setCounselor(employee);
         userAccount.setNetwork(network);
         userAccount.setRole(role);
-        userAccountList.add(userAccount);
+        userAccList.add(userAccount);
         return userAccount;
     }
     
@@ -78,7 +78,7 @@ public class UserAccDirectory {
         userAccount.setLawyer(employee);
         userAccount.setNetwork(network);
         userAccount.setRole(role);
-        userAccountList.add(userAccount);
+        userAccList.add(userAccount);
         return userAccount;
     }
     
@@ -89,7 +89,7 @@ public class UserAccDirectory {
         userAccount.setBankManager(employee);
         userAccount.setRole(role);
          userAccount.setNetwork(network);
-        userAccountList.add(userAccount);
+        userAccList.add(userAccount);
         return userAccount;
     }
     public UserAcc createInsuranceManagerUserAccount(String username, String password, InsuranceManager employee, Role role, String network){
@@ -99,7 +99,7 @@ public class UserAccDirectory {
         userAccount.setInsuranceManager(employee);
         userAccount.setRole(role);
          userAccount.setNetwork(network);
-        userAccountList.add(userAccount);
+        userAccList.add(userAccount);
         return userAccount;
     }
 
@@ -111,7 +111,7 @@ public class UserAccDirectory {
         
         userAccount.setNetwork(network);
         userAccount.setRole(role);
-        userAccountList.add(userAccount);
+        userAccList.add(userAccount);
         return userAccount;
     }
     
@@ -124,18 +124,18 @@ public class UserAccDirectory {
         
         userAccount.setNetwork(network);
         userAccount.setRole(role);
-        userAccountList.add(userAccount);
+        userAccList.add(userAccount);
         return userAccount;
     }
     public boolean checkIfUsernameIsUnique(String username){
-        for (UserAcc ua : userAccountList){
-            if (ua.getUsername().equals(username))
+        for (UserAcc  userAcc: userAccList){
+            if (userAcc.getUsername().equals(username))
                 return false;
         }
         return true;
     }
     public void deleteUserAccount(UserAcc userAccount)
     {
-        userAccountList.remove(userAccount);
+        userAccList.remove(userAccount);
     }
 }

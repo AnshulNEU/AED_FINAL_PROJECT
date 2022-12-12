@@ -16,7 +16,7 @@ import java.util.ArrayList;
  * @author anshulsingh
  */
 public class Counselor extends Employees {
-   private int workRequestCount;
+   private int workRequestCt;
    private int ratingReviews;
    private boolean isAvailable;
    private LocalTime availableTime;
@@ -41,12 +41,12 @@ public class Counselor extends Employees {
     
     
     }
-    public int getWorkRequestCount() {
-        return workRequestCount;
+    public int getWorkRequestCt() {
+        return workRequestCt;
     }
 
-    public void setWorkRequestCount(int workRequestCount) {
-        this.workRequestCount = workRequestCount;
+    public void setWorkRequestCt(int workRequestCt) {
+        this.workRequestCt = workRequestCt;
     }
 
     public int getRatingReviews() {

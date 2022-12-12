@@ -14,16 +14,16 @@ public class LoanAccount {
     
     private String firstName;
     private String lastName;
-    private String emailId;
-    private int funds;
+    private String emailID;
+    private int fund;
     private String address;
-    private int bankAccountNumber;
-    private int bankBalance;
-    private String passportNumber;
+    private int bankAccountNum;
+    private int bankBal;
+    private String passportNum;
     private String username;
-    private int ownFunds;
-    private String docPath;
-    private String counselor;
+    private int ownedFund;
+    private String doctorPath;
+    private String counsellor;
     private String hospital;
     private int fundsApproved;
 
@@ -35,21 +35,21 @@ public class LoanAccount {
         this.fundsApproved = fundsApproved;
     }
 
-    public int getOwnFunds() {
-        return ownFunds;
+    public int getOwnedFund() {
+        return ownedFund;
     }
 
-    public void setOwnFunds(int ownFunds) {
-        this.ownFunds = ownFunds;
+    public void setOwnedFund(int ownedFund) {
+        this.ownedFund = ownedFund;
     }
 
     
 
     public LoanAccount(String firstName, String emailId) {
         this.firstName = firstName;
-        this.emailId = emailId;
+        this.emailID = emailId;
         Random rand =  new Random();
-        this.bankAccountNumber = rand.nextInt(100000000);
+        this.bankAccountNum = rand.nextInt(100000000);
     }
 
     public String getHospital() {
@@ -61,40 +61,40 @@ public class LoanAccount {
     }
 
 
-    public String getCounselor() {
-        return counselor;
+    public String getCounsellor() {
+        return counsellor;
     }
 
-    public void setCounselor(String counselor) {
-        this.counselor = counselor;
+    public void setCounsellor(String counsellor) {
+        this.counsellor = counsellor;
     }
     
 
-    public int getBankAccountNumber() {
-        return bankAccountNumber;
+    public int getBankAccountNum() {
+        return bankAccountNum;
     }
 
-    public void setBankAccountNumber(int bankAccountNumber) {
-        this.bankAccountNumber = bankAccountNumber;
+    public void setBankAccountNum(int bankAccountNum) {
+        this.bankAccountNum = bankAccountNum;
     }
 
-    public int getBankBalance() {
-        return bankBalance;
+    public int getBankBal() {
+        return bankBal;
     }
 
-    public void setBankBalance(int bankBalance) {
-        this.bankBalance = bankBalance;
+    public void setBankBal(int bankBal) {
+        this.bankBal = bankBal;
     }
     
 
     public LoanAccount() {
         this.firstName = new String();
-        this.emailId = new String();
+        this.emailID = new String();
         this.lastName = new String();
         this.address = new String();
-        this.funds = 0;
-        this.passportNumber = new String();
-        this.docPath = new String();
+        this.fund = 0;
+        this.passportNum = new String();
+        this.doctorPath = new String();
     }
 
     public String getFirstName() {
@@ -113,20 +113,20 @@ public class LoanAccount {
         this.lastName = lastName;
     }
 
-    public String getEmailId() {
-        return emailId;
+    public String getEmailID() {
+        return emailID;
     }
 
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
+    public void setEmailID(String emailID) {
+        this.emailID = emailID;
     }
 
-    public int getFunds() {
-        return funds;
+    public int getFund() {
+        return fund;
     }
 
-    public void setFunds(int funds) {
-        this.funds = funds;
+    public void setFund(int fund) {
+        this.fund = fund;
     }
 
     public String getAddress() {
@@ -137,12 +137,12 @@ public class LoanAccount {
         this.address = address;
     }
 
-    public String getPassportNumber() {
-        return passportNumber;
+    public String getPassportNum() {
+        return passportNum;
     }
 
-    public void setPassportNumber(String passportNumber) {
-        this.passportNumber = passportNumber;
+    public void setPassportNum(String passportNum) {
+        this.passportNum = passportNum;
     }
 
     public String getUsername() {
@@ -153,30 +153,30 @@ public class LoanAccount {
         this.username = username;
     }
 
-    public String getDocPath() {
-        return docPath;
+    public String getDoctorPath() {
+        return doctorPath;
     }
 
-    public void setDocPath(String docPath) {
-        this.docPath = docPath;
+    public void setDoctorPath(String doctorPath) {
+        this.doctorPath = doctorPath;
     }
 
     
     public void addValues(String emailId, int funds, String address, String passportNumber, String docPath) {
-        this.emailId = emailId;
-        this.funds = funds;
+        this.emailID = emailId;
+        this.fund = funds;
         this.address = address;
-        this.passportNumber = passportNumber;
-        this.docPath = docPath;
+        this.passportNum = passportNumber;
+        this.doctorPath = docPath;
         
     }
     
     public void addValues1(String emailId, int funds, String address, String passportNumber, String docPath) {
-        this.emailId = emailId;
-        this.ownFunds = funds;
+        this.emailID = emailId;
+        this.ownedFund = funds;
         this.address = address;
-        this.passportNumber = passportNumber;
-        this.docPath = docPath;
+        this.passportNum = passportNumber;
+        this.doctorPath = docPath;
         
     }
     @Override

@@ -43,13 +43,13 @@ public class ViewBirthMotherRequestsJPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) workRequestJTable.getModel();
         
         model.setRowCount(0);
-        for (BirthMotherParent bm : enterprise.getWorkQueue().getBirthMotherToParent()){
+        for (BirthMotherParent bm : enterprise.getWorkQueue().getBirthMotherParent()){
             if(bm.getParent().equals(userAccount.getParent())){
             Object[] row = new Object[3];
             row[0] = bm;
-            row[1] = bm.getBirthMother().getEmailId();
+            row[1] = bm.getBirthMother().getEmailID();
             
-            row[2] = bm.getBirthMother().getCounselor();
+            row[2] = bm.getBirthMother().getCounsellor();
             
             model.addRow(row);
             }

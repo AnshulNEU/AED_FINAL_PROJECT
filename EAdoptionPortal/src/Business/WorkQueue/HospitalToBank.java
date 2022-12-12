@@ -14,36 +14,36 @@ import Business.People.Parents;
  */
 public class HospitalToBank extends WorkRequests{
     
-     private String requestResult;
-     private BirthMother birthMother;
+     private String reqResult;
+     private BirthMother mother;
     
     public HospitalToBank(String message, BirthMother BM) {
         super();
         super.setMessage(message);
         super.setStatus("Pending");
-        this.requestResult = new String();
-        this.birthMother = BM;   
+        this.reqResult = new String();
+        this.mother = BM;   
         
     }
 
-    public BirthMother getBirthMother() {
-        return birthMother;
+    public BirthMother getMother() {
+        return mother;
     }
 
-    public void setBirthMother(BirthMother birthMother) {
-        this.birthMother = birthMother;
+    public void setMother(BirthMother mother) {
+        this.mother = mother;
     }
 
     public HospitalToBank(String requestResult) {
-        this.requestResult = requestResult;
+        this.reqResult = requestResult;
     }
 
-    public String getRequestResult() {
-        return requestResult;
+    public String getReqResult() {
+        return reqResult;
     }
 
-    public void setRequestResult(String requestResult) {
-        this.requestResult = requestResult;
+    public void setReqResult(String reqResult) {
+        this.reqResult = reqResult;
     }
      
      

@@ -43,11 +43,11 @@ public class ViewInsuranceApplicationWorkAreaJPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) workRequestJTable.getModel();
         
         model.setRowCount(0);
-        for (BirthMotherInsuranceManager request : enterprise.getWorkQueue().getBirthMotherToInsurance()){
+        for (BirthMotherInsuranceManager request : enterprise.getWorkQueue().getBirthMotherInsurance()){
             Object[] row = new Object[4];
             row[0] = request;
             row[1] = request.getInsurance().getHospital();
-            row[2] = request.getInsurance().getPolicyNumber();
+            row[2] = request.getInsurance().getPolicyNum();
             row[3] = request.getStatus();
             
             model.addRow(row);

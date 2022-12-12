@@ -17,14 +17,14 @@ import Business.UserAccount.UserAcc;
 public class BirthMotherInsuranceManager extends WorkRequests{
     
     private BirthMother birthMother;
-    private UserAcc userAccount;
+    private UserAcc userAcc;
     private InsuranceAccount insurance;
     private InsuranceDirectory insuranceDir;
 
     public BirthMotherInsuranceManager(BirthMother birthMother, UserAcc userAccount, InsuranceAccount insurance, InsuranceDirectory insur) {
         super();
         this.birthMother = birthMother;
-        this.userAccount = userAccount;
+        this.userAcc = userAccount;
         this.insurance = insurance;
     }
 
@@ -36,12 +36,12 @@ public class BirthMotherInsuranceManager extends WorkRequests{
         this.birthMother = birthMother;
     }
 
-    public UserAcc getUserAccount() {
-        return userAccount;
+    public UserAcc getUserAcc() {
+        return userAcc;
     }
 
-    public void setUserAccount(UserAcc userAccount) {
-        this.userAccount = userAccount;
+    public void setUserAcc(UserAcc userAcc) {
+        this.userAcc = userAcc;
     }
 
     public InsuranceAccount getInsurance() {

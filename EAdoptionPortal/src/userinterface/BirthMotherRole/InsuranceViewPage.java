@@ -64,7 +64,7 @@ public class InsuranceViewPage extends javax.swing.JPanel {
         this.enterprise = enterprise;
         
         txtUsername.setText(BirthMother.getUsername());
-        txtEmail.setText(BirthMother.getEmailId());
+        txtEmail.setText(BirthMother.getEmailID());
         txtFirstName.setText(BirthMother.getFirstName());
         txtLastName.setText(BirthMother.getLastName());
         
@@ -346,25 +346,25 @@ public class InsuranceViewPage extends javax.swing.JPanel {
         for(Networking network: system.getNetworkList()){
             if(network.getName().equals(userAccount.getNetwork()))
             {
-                for(Enterprise e : network.getEnterpriseDirectory().getEnterpriseList()){
+                for(Enterprise e : network.getEnterpriseDirectory().getEnterpriseDir()){
                     if(e.getEnterpriseType().equals(Enterprise.EnterpriseType.FinancialEnterprise))
                     {
                             this.enterprise = e;
                                nw.setHospital(userAccount.getBirthmother().getHospital());
                                nw.setAddress(this.address);
-                               nw.setEmailId(this.emailId);
+                               nw.setEmailID(this.emailId);
                                nw.setLastName(lastName);
                                nw.setFirstName(firstName);
-                               nw.setPolicyNumber(policynumber);
+                               nw.setPolicyNum(policynumber);
                                nw.setUsername(userAccount.getUsername());
-                               nw.setDocPath(txtDoc.getText());
+                               nw.setDoctorPath(txtDoc.getText());
                                
 
                                 BirthMotherInsuranceManager bminsure = new BirthMotherInsuranceManager( this.BirthMother, userAccount, nw, insuranceDirectory);
                                 bminsure.setStatus("Pending");
                                 bminsure.setSender(userAccount);
                                 bminsure.setRequestDate(new Date());
-                               e.getWorkQueue().getBirthMotherToInsurance().add(bminsure);
+                               e.getWorkQueue().getBirthMotherInsurance().add(bminsure);
                                e.getInsuranceAccountDirectory().addInsurance(nw);
                         
                     }

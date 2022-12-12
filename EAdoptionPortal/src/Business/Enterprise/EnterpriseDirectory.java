@@ -12,19 +12,19 @@ import java.util.ArrayList;
  * @author anshulsingh
  */
 public class EnterpriseDirectory {
-    private ArrayList<Enterprise> enterpriseList;
+    private ArrayList<Enterprise> enterpriseDir;
    
 
-    public ArrayList<Enterprise> getEnterpriseList() {
-        return enterpriseList;
+    public ArrayList<Enterprise> getEnterpriseDir() {
+        return enterpriseDir;
     }
 
-    public void setEnterpriseList(ArrayList<Enterprise> enterpriseList) {
-        this.enterpriseList = enterpriseList;
+    public void setEnterpriseDir(ArrayList<Enterprise> enterpriseDir) {
+        this.enterpriseDir = enterpriseDir;
     }
     
     public EnterpriseDirectory(){
-        enterpriseList=new ArrayList<Enterprise>();
+        enterpriseDir=new ArrayList<Enterprise>();
     }
     
    //Creating and initializing Enterprise
@@ -33,33 +33,33 @@ public class EnterpriseDirectory {
         if(type==Enterprise.EnterpriseType.Hospital){
             enterprise=new HospitalEnterprise(name);
             enterprise.setEnterpriseType(type);
-            enterpriseList.add(enterprise);
+            enterpriseDir.add(enterprise);
             return enterprise;
         }
         if(type==Enterprise.EnterpriseType.FinancialEnterprise){
 
             enterprise=new FinancialEnterprise(name);
             enterprise.setEnterpriseType(type);
-            enterpriseList.add(enterprise);
+            enterpriseDir.add(enterprise);
             return enterprise;
         }
          if(type==Enterprise.EnterpriseType.OrphanageEnterprise){
             enterprise=new OrphanageEnterprise(name);
             enterprise.setEnterpriseType(type);
-            enterpriseList.add(enterprise);
+            enterpriseDir.add(enterprise);
             return enterprise;
         }
          if(type==Enterprise.EnterpriseType.LegalEnterprise){
             enterprise=new LegalEnterprise(name);
             enterprise.setEnterpriseType(type);
-            enterpriseList.add(enterprise);
+            enterpriseDir.add(enterprise);
             return enterprise;
         }
         
         return null;
     }
     public boolean containsName(String type){
-        for (Enterprise org : enterpriseList){
+        for (Enterprise org : enterpriseDir){
             if(org.getName().equals(type)){
                 return true;
             }

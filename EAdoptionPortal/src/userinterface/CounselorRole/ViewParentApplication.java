@@ -47,7 +47,7 @@ public class ViewParentApplication extends javax.swing.JPanel {
     }
     public void populateComboBox(){
         for(Networking N: system.getNetworkList()){
-            for(Enterprise e:N.getEnterpriseDirectory().getEnterpriseList()){
+            for(Enterprise e:N.getEnterpriseDirectory().getEnterpriseDir()){
             if(e.getEnterpriseType().getValue().equals(Enterprise.EnterpriseType.LegalEnterprise.getValue())){
                  bankComboBox.addItem(e);
                 }
@@ -385,9 +385,9 @@ public class ViewParentApplication extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
     private void fillComponents(){
         txtUsername.setText(request.getParent().getUsername());
-        txtEmail.setText(request.getParent().getEmail());
+        txtEmail.setText(request.getParent().getEmailID());
         
-        if(this.request.getParent().isWorstCaseScenerio() == true){
+        if(this.request.getParent().isWorstCaseScenario() == true){
             isPrepared.setSelected(true);
         }
         else
@@ -411,7 +411,7 @@ public class ViewParentApplication extends javax.swing.JPanel {
         else
            notComfortable.setSelected(true);
         
-        if(this.request.getParent().isCurrChildrenOnBoard() == true){
+        if(this.request.getParent().isCurrentChildrenOnBoard() == true){
             isChildrenOnBoard.setSelected(true);
         }
         else
@@ -423,7 +423,7 @@ public class ViewParentApplication extends javax.swing.JPanel {
         else
            notEducated.setSelected(true);
         
-        if(this.request.getParent().isPromises() == true){
+        if(this.request.getParent().isPromise() == true){
             isPromise.setSelected(true);
         }
         else
@@ -439,11 +439,11 @@ public class ViewParentApplication extends javax.swing.JPanel {
     }
     private void btnAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptActionPerformed
         request.setReceiver(account);
-        request.setCounsellorFeeback("Accepted");
+        request.setCounsellorFeedback("Accepted");
         request.setResolveDate(new Date());
         request.setStatus("Completed");
-        request.getParent().setCounselor(account.getCounselor().getName());
-        request.setRequestResult("Completed");
+        request.getParent().setCounsellor(account.getCounselor().getEmpName());
+        request.setReqResult("Completed");
         String msg = messageTxt.getText();
         if(msg.equals("")){
               JOptionPane.showMessageDialog(null, "Please input your message for the parent to be reviewed by admin ");
@@ -462,7 +462,7 @@ public class ViewParentApplication extends javax.swing.JPanel {
         CounsellorsToLawyer counselorReq1 = new CounsellorsToLawyer(messageTxt.getText(), request.getParent());
         counselorReq1.setStatus("Processing");
         counselorReq1.setSender(account);
-        f.getWorkQueue().getCounselorToLawyer().add(counselorReq1);
+        f.getWorkQueue().getCounselorLawyer().add(counselorReq1);
         
         
         userProcessContainer.remove(this);
@@ -485,17 +485,17 @@ public class ViewParentApplication extends javax.swing.JPanel {
     private void btnRejectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRejectActionPerformed
         // TODO add your handling code here:
        request.setReceiver(account);
-        request.setRequestResult("Rejected by " + account.getCounselor().getName());
+        request.setReqResult("Rejected by " + account.getCounselor().getEmpName());
         request.setResolveDate(new Date());
 		
         request.setStatus("Rejected");
-        request.getParent().setCounselor(account.getCounselor().getName());
+        request.getParent().setCounsellor(account.getCounselor().getEmpName());
         String msg = messageTxt.getText();
         if(msg.equals("")){
               JOptionPane.showMessageDialog(null, "Please input your message for the parent to be reviewed by admin ");
               throw new NullPointerException("Enter message");
         }
-	request.setCounsellorFeeback(msg);
+	request.setCounsellorFeedback(msg);
         request.setMessage(msg);
 	request.setSender(account);
         

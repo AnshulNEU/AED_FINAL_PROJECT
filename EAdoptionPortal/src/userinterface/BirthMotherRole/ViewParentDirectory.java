@@ -41,14 +41,14 @@ public class ViewParentDirectory extends javax.swing.JPanel {
         model.setRowCount(0);
         
 
-        for (Organization o : enterprise.getOrganizationDirectory().getOrganizationList()){
+        for (Organization o : enterprise.getOrganizationalDirectory().getOrganizationList()){
             if(o.getName().equals(Organization.Type.ParentsOrg.getValue())){
-                for (Parents parent : o.getParentDirectory().getParentsList()){
+                for (Parents parent : o.getParentDirectory().getParentsDir()){
                     if(parent.isIsAvailable()){
                     Object[] row = new Object[3];
                     row[0] = parent;
-                    row[1] = parent.getEmail();
-                    row[2] = parent.getCounselor();
+                    row[1] = parent.getEmailID();
+                    row[2] = parent.getCounsellor();
                     model.addRow(row);
                     }
                 }

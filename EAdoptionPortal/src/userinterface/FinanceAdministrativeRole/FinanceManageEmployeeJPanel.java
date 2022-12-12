@@ -42,7 +42,7 @@ public class FinanceManageEmployeeJPanel extends javax.swing.JPanel {
     public void populateOrganizationEmpComboBox(){
         organizationEmpJComboBox.removeAllItems();
         
-        for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()){
+        for (Organization organization : enterprise.getOrganizationalDirectory().getOrganizationList()){
             organizationEmpJComboBox.addItem(organization);
         }
     }
@@ -52,16 +52,16 @@ public class FinanceManageEmployeeJPanel extends javax.swing.JPanel {
         
         model.setRowCount(0);
         
-        for (Employees employee : organization.getEmployeeDirectory().getBankManagerList()){
+        for (Employees employee : organization.getEmployeeDirectory().getBankManagerDir()){
             Object[] row = new Object[2];
-            row[0] = employee.getId();
-            row[1] = employee.getName();
+            row[0] = employee.getEmpId();
+            row[1] = employee.getEmpName();
             model.addRow(row);
         }
-         for (Employees employee : organization.getEmployeeDirectory().getInsuranceManagerList()){
+         for (Employees employee : organization.getEmployeeDirectory().getInsuranceManagerDir()){
             Object[] row = new Object[2];
-            row[0] = employee.getId();
-            row[1] = employee.getName();
+            row[0] = employee.getEmpId();
+            row[1] = employee.getEmpName();
             model.addRow(row);
         }
     }

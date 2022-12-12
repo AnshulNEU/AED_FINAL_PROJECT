@@ -40,7 +40,7 @@ public class ViewBirthMotherProfile extends javax.swing.JPanel {
         this.BirthMother = request.getBirthMother();
         
         txtUsername.setText(BirthMother.getUsername());
-        txtEmail.setText(BirthMother.getEmailId());
+        txtEmail.setText(BirthMother.getEmailID());
         txtFirstName.setText(BirthMother.getFirstName());
         txtLastName.setText(BirthMother.getLastName());
         txtBloodGroup.setText(BirthMother.getBloodGroup());

@@ -13,138 +13,138 @@ import java.util.ArrayList;
  */
 public class WorkQ {
     
-    private ArrayList<BirthMotherLawyer> birthMotherToLawyer;
-    private ArrayList<ParentsToLawyer> parentsToLawyer;
-    private ArrayList<BirthMotherCounselor> birthMotherToCounselor;
-    private ArrayList<ParentsToCounsellor> parentToCounselor;
-    private ArrayList<CounsellorsToAdmin> counselorToAdmin;
-    private ArrayList<BirthMotherParent> birthMotherToParent;
-    private ArrayList<BirthMotherLoan> birthMotherToLoan; 
-    private ArrayList<HospitalToBank> hospitalAdminToBank;
-    private ArrayList<BirthMotherInsuranceManager> birthMotherToInsurance;
-    private ArrayList<OrphanageToCounsellor> orphanageToCounselor;
-    private ArrayList<OrphanageToLawyer> orphanageToLawyer;
-    private ArrayList<LawyerToAdmin> lawyerToAdmin;
-    private ArrayList<CounsellorsToLawyer> counselorToLawyer;
+    private ArrayList<BirthMotherLawyer> birthMotherLawyer;
+    private ArrayList<ParentsToLawyer> parentsLawyer;
+    private ArrayList<BirthMotherCounselor> birthMotherCounselor;
+    private ArrayList<ParentsToCounsellor> parentCounselor;
+    private ArrayList<CounsellorsToAdmin> counselorAdmin;
+    private ArrayList<BirthMotherParent> birthMotherParent;
+    private ArrayList<BirthMotherLoan> birthMotherLoan; 
+    private ArrayList<HospitalToBank> hospitalAdminBank;
+    private ArrayList<BirthMotherInsuranceManager> birthMotherInsurance;
+    private ArrayList<OrphanageToCounsellor> orphanageCounselor;
+    private ArrayList<OrphanageToLawyer> orphanageLawyer;
+    private ArrayList<LawyerToAdmin> lawyerAdmin;
+    private ArrayList<CounsellorsToLawyer> counselorLawyer;
     
     public WorkQ() {
-        birthMotherToCounselor = new ArrayList();
-        parentToCounselor = new ArrayList();
-        counselorToAdmin = new ArrayList();
-        counselorToLawyer = new ArrayList();
-        birthMotherToParent =  new ArrayList();
-        birthMotherToLoan = new ArrayList();
-        hospitalAdminToBank = new ArrayList<>();
-        birthMotherToInsurance = new ArrayList<>();
-        orphanageToCounselor= new ArrayList<>();
-        birthMotherToLawyer = new ArrayList();
-        parentsToLawyer = new ArrayList();
-        orphanageToLawyer= new ArrayList<>();
-        lawyerToAdmin = new ArrayList();
+        birthMotherCounselor = new ArrayList();
+        parentCounselor = new ArrayList();
+        counselorAdmin = new ArrayList();
+        counselorLawyer = new ArrayList();
+        birthMotherParent =  new ArrayList();
+        birthMotherLoan = new ArrayList();
+        hospitalAdminBank = new ArrayList<>();
+        birthMotherInsurance = new ArrayList<>();
+        orphanageCounselor= new ArrayList<>();
+        birthMotherLawyer = new ArrayList();
+        parentsLawyer = new ArrayList();
+        orphanageLawyer= new ArrayList<>();
+        lawyerAdmin = new ArrayList();
                
     }  
 
-    public ArrayList<BirthMotherInsuranceManager> getBirthMotherToInsurance() {
-        return birthMotherToInsurance;
+    public ArrayList<BirthMotherInsuranceManager> getBirthMotherInsurance() {
+        return birthMotherInsurance;
     }
 
-    public void setBirthMotherToInsurance(ArrayList<BirthMotherInsuranceManager> birthMotherToInsurance) {
-        this.birthMotherToInsurance = birthMotherToInsurance;
+    public void setBirthMotherInsurance(ArrayList<BirthMotherInsuranceManager> birthMotherInsurance) {
+        this.birthMotherInsurance = birthMotherInsurance;
     }
     
-    public ArrayList<BirthMotherLoan> getBirthMotherToLoan() {
-        return birthMotherToLoan;
+    public ArrayList<BirthMotherLoan> getBirthMotherLoan() {
+        return birthMotherLoan;
     }
 
-    public void setBirthMotherToLoan(ArrayList<BirthMotherLoan> birthMotherToLoan) {
-        this.birthMotherToLoan = birthMotherToLoan;
+    public void setBirthMotherLoan(ArrayList<BirthMotherLoan> birthMotherLoan) {
+        this.birthMotherLoan = birthMotherLoan;
     }
 
-    public ArrayList<BirthMotherParent> getBirthMotherToParent() {
-        return birthMotherToParent;
+    public ArrayList<BirthMotherParent> getBirthMotherParent() {
+        return birthMotherParent;
     }
 
-    public void setBirthMotherToParent(ArrayList<BirthMotherParent> birthMotherToParent) {
-        this.birthMotherToParent = birthMotherToParent;
+    public void setBirthMotherParent(ArrayList<BirthMotherParent> birthMotherParent) {
+        this.birthMotherParent = birthMotherParent;
     }
 
     public ArrayList<BirthMotherCounselor> getBirthMotherToCounsellor() {
-        return birthMotherToCounselor;
+        return birthMotherCounselor;
     }
     
-    public ArrayList<BirthMotherLawyer> getBirthMotherToLawyer() {
-        return birthMotherToLawyer;
+    public ArrayList<BirthMotherLawyer> getBirthMotherLawyer() {
+        return birthMotherLawyer;
     }
 
-    public ArrayList<ParentsToCounsellor> getParentToCounselor() {
-        return parentToCounselor;
+    public ArrayList<ParentsToCounsellor> getParentCounselor() {
+        return parentCounselor;
     }
     
-    public ArrayList<ParentsToLawyer> getParentsToLawyer() {
-        return parentsToLawyer;
+    public ArrayList<ParentsToLawyer> getParentsLawyer() {
+        return parentsLawyer;
     }
 
-    public ArrayList<OrphanageToCounsellor> getOrphanageToCounselor() {
-        return orphanageToCounselor;
+    public ArrayList<OrphanageToCounsellor> getOrphanageCounselor() {
+        return orphanageCounselor;
     }
-    public ArrayList<CounsellorsToLawyer> getCounselorToLawyer() {
-        return counselorToLawyer;
+    public ArrayList<CounsellorsToLawyer> getCounselorLawyer() {
+        return counselorLawyer;
     }
-    public void setOrphanageToCounselor(ArrayList<OrphanageToCounsellor> orphanageToCounselor) {
-        this.orphanageToCounselor = orphanageToCounselor;
+    public void setOrphanageCounselor(ArrayList<OrphanageToCounsellor> orphanageCounselor) {
+        this.orphanageCounselor = orphanageCounselor;
     }
     
-    public void setOrphanageToLawyer(ArrayList<OrphanageToLawyer> orphanageToLawyer) {
-        this.orphanageToLawyer = orphanageToLawyer;
+    public void setOrphanageLawyer(ArrayList<OrphanageToLawyer> orphanageLawyer) {
+        this.orphanageLawyer = orphanageLawyer;
     }
 
-    public void setBirthMotherToLawyer(ArrayList<BirthMotherLawyer> birthMotherToLawyer) {
-        this.birthMotherToLawyer = birthMotherToLawyer;
+    public void setBirthMotherLawyer(ArrayList<BirthMotherLawyer> birthMotherLawyer) {
+        this.birthMotherLawyer = birthMotherLawyer;
     }
     
-    public void setBirthMotherToCounselor(ArrayList<BirthMotherCounselor> birthMotherToCounselor) {
-        this.birthMotherToCounselor = birthMotherToCounselor;
+    public void setBirthMotherCounselor(ArrayList<BirthMotherCounselor> birthMotherCounselor) {
+        this.birthMotherCounselor = birthMotherCounselor;
     }
     public void addBirthMotherToCounselor(BirthMotherCounselor bMC) {
-       birthMotherToCounselor.add(bMC);  
+       birthMotherCounselor.add(bMC);  
     }
     public void addBirthMotherToLawyer(BirthMotherLawyer bML) {
-       birthMotherToLawyer.add(bML);  
+       birthMotherLawyer.add(bML);  
     }
     public void addOrphanageToCounselor(OrphanageToCounsellor oc){
-        orphanageToCounselor.add(oc);
+        orphanageCounselor.add(oc);
     }
     public void setParentCounsellor(ArrayList<ParentsToCounsellor> parentToCounselor) {
-        this.parentToCounselor = parentToCounselor;
+        this.parentCounselor = parentToCounselor;
     }
     
     public void addOrphanageToLawyer(OrphanageToLawyer ol){
-        orphanageToLawyer.add(ol);
+        orphanageLawyer.add(ol);
     }
     public void setParentLawyer(ArrayList<ParentsToLawyer> parentsToLawyer) {
-        this.parentsToLawyer = parentsToLawyer;
+        this.parentsLawyer = parentsToLawyer;
     }
 
-    public void setCounselorToAdmin(ArrayList<CounsellorsToAdmin> counselorToAdmin) {
-        this.counselorToAdmin = counselorToAdmin;
+    public void setCounselorAdmin(ArrayList<CounsellorsToAdmin> counselorAdmin) {
+        this.counselorAdmin = counselorAdmin;
     }
     
-    public void setLawyerToAdmin(ArrayList<LawyerToAdmin> lawyerToAdmin) {
-        this.lawyerToAdmin = lawyerToAdmin;
+    public void setLawyerAdmin(ArrayList<LawyerToAdmin> lawyerAdmin) {
+        this.lawyerAdmin = lawyerAdmin;
     }
 
-    public ArrayList<CounsellorsToAdmin> getCounselorToAdmin() {
-        return counselorToAdmin;
+    public ArrayList<CounsellorsToAdmin> getCounselorAdmin() {
+        return counselorAdmin;
     }
-    public ArrayList<LawyerToAdmin> getLawyerToAdmin() {
-        return lawyerToAdmin;
+    public ArrayList<LawyerToAdmin> getLawyerAdmin() {
+        return lawyerAdmin;
     }
-    public ArrayList<HospitalToBank> getHospitalAdminToBank() {
-        return hospitalAdminToBank;
+    public ArrayList<HospitalToBank> getHospitalAdminBank() {
+        return hospitalAdminBank;
     }
 
-    public void setHospitalAdminToBank(ArrayList<HospitalToBank> hospitalAdminToBank) {
-        this.hospitalAdminToBank = hospitalAdminToBank;
+    public void setHospitalAdminBank(ArrayList<HospitalToBank> hospitalAdminBank) {
+        this.hospitalAdminBank = hospitalAdminBank;
     }
     
 }

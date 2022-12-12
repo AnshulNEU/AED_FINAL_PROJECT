@@ -16,29 +16,29 @@ public class InsuranceAccount {
     
     private String firstName;
     private String lastName;
-    private String emailId;
-    private String policyNumber;
+    private String emailID;
+    private String policyNum;
     private String address;
-    private String counselor;
+    private String counsellor;
     private String hospital;
     private int fundsApproved;
     private BirthMother birthmother;
 
    
     private String username;
-    private String docPath;
+    private String doctorPath;
 
 
     public InsuranceAccount(String firstName, String lastName, String emailId, String policynumber, String address, String docPath) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.emailId = emailId;
-        this.policyNumber = policynumber;
+        this.emailID = emailId;
+        this.policyNum = policynumber;
         this.address = address;
         this.hospital = new String();
         this.fundsApproved = 0;
         
-        this.docPath = docPath;
+        this.doctorPath = docPath;
     }
 
     public InsuranceAccount() {
@@ -60,20 +60,20 @@ public class InsuranceAccount {
         this.lastName = lastName;
     }
 
-    public String getEmailId() {
-        return emailId;
+    public String getEmailID() {
+        return emailID;
     }
 
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
+    public void setEmailID(String emailID) {
+        this.emailID = emailID;
     }
 
-    public String getPolicyNumber() {
-        return policyNumber;
+    public String getPolicyNum() {
+        return policyNum;
     }
 
-    public void setPolicyNumber(String policyNumber) {
-        this.policyNumber = policyNumber;
+    public void setPolicyNum(String policyNum) {
+        this.policyNum = policyNum;
     }
 
     public String getAddress() {
@@ -84,12 +84,12 @@ public class InsuranceAccount {
         this.address = address;
     }
 
-    public String getCounselor() {
-        return counselor;
+    public String getCounsellor() {
+        return counsellor;
     }
 
-    public void setCounselor(String counselor) {
-        this.counselor = counselor;
+    public void setCounsellor(String counsellor) {
+        this.counsellor = counsellor;
     } 
 
     public BirthMother getBirthmother() {
@@ -126,12 +126,12 @@ public class InsuranceAccount {
         this.username = username;
     }
 
-    public String getDocPath() {
-        return docPath;
+    public String getDoctorPath() {
+        return doctorPath;
     }
 
-    public void setDocPath(String docPath) {
-        this.docPath = docPath;
+    public void setDoctorPath(String doctorPath) {
+        this.doctorPath = doctorPath;
     }
  
     @Override

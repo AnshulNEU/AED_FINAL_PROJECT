@@ -12,25 +12,25 @@ import java.util.ArrayList;
  */
 public class BirthMotherDirectory {
     
-    private ArrayList<BirthMother> birthMotherList;
+    private ArrayList<BirthMother> birthMotherDir;
 
     public BirthMotherDirectory() {
-        birthMotherList = new ArrayList();
+        birthMotherDir = new ArrayList();
     }
 
-    public ArrayList<BirthMother> getBirthMotherList() {
-        return birthMotherList;
+    public ArrayList<BirthMother> getBirthMotherDir() {
+        return birthMotherDir;
     }
     
     public BirthMother createBirthMother(String name){
         BirthMother birthMother = new BirthMother();
         birthMother.setUsername(name);
-        birthMotherList.add(birthMother);
+        birthMotherDir.add(birthMother);
         return birthMother;
     }
     
     public void addBirthMother(BirthMother BM){
-        this.birthMotherList.add(BM);
+        this.birthMotherDir.add(BM);
     }
 
   

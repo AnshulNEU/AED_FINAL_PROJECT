@@ -142,7 +142,7 @@ public class loginScreen extends javax.swing.JPanel {
                 //Step 2: Go inside each network and check each enterprise
                 for(Networking network:system.getNetworkList()){
                     //Step 2.a: check against each enterprise
-                    for(Enterprise enterprise:network.getEnterpriseDirectory().getEnterpriseList()){
+                    for(Enterprise enterprise:network.getEnterpriseDirectory().getEnterpriseDir()){
                         userAccount=enterprise.getUserAccountDirectory().authenticateUser(userName, password);
                         if(userAccount!=null){
                                    inEnterprise=enterprise;
@@ -158,7 +158,7 @@ public class loginScreen extends javax.swing.JPanel {
                 //Step 2: Go inside each network and check each enterprise
                 for(Networking network:system.getNetworkList()){
                     //Step 2.a: check against each enterprise
-                    for(Enterprise enterprise:network.getEnterpriseDirectory().getEnterpriseList()){
+                    for(Enterprise enterprise:network.getEnterpriseDirectory().getEnterpriseDir()){
                         userAccount=enterprise.getUserAccountDirectory().authenticateUser(userName, password);
                         if(userAccount!=null){
                                    inEnterprise=enterprise;
@@ -176,9 +176,9 @@ public class loginScreen extends javax.swing.JPanel {
             //Step 2: Go inside each network and check each enterprise
                 for(Networking network:system.getNetworkList()){
                     //Step 2.a: check against each enterprise
-                    for(Enterprise enterprise:network.getEnterpriseDirectory().getEnterpriseList()){
+                    for(Enterprise enterprise:network.getEnterpriseDirectory().getEnterpriseDir()){
                         if(enterprise.getEnterpriseType().equals(enterprise.getEnterpriseType().Hospital)){
-                            for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList()){
+                            for(Organization organization:enterprise.getOrganizationalDirectory().getOrganizationList()){
                                 if(organization.getName().equals("Counselor Organization")){
                                     userAccount=organization.getUserAccountDirectory().authenticateUser(userName, password);
                                     if(userAccount!=null){
@@ -204,9 +204,9 @@ public class loginScreen extends javax.swing.JPanel {
             //Step 2: Go inside each network and check each enterprise
                 for(Networking network:system.getNetworkList()){
                     //Step 2.a: check against each enterprise
-                    for(Enterprise enterprise:network.getEnterpriseDirectory().getEnterpriseList()){
+                    for(Enterprise enterprise:network.getEnterpriseDirectory().getEnterpriseDir()){
                         if(enterprise.getEnterpriseType().equals(enterprise.getEnterpriseType().Hospital)){
-                            for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList()){
+                            for(Organization organization:enterprise.getOrganizationalDirectory().getOrganizationList()){
                                 if(organization.getName().equals("BirthMother Organization")){
                                     userAccount=organization.getUserAccountDirectory().authenticateUser(userName, password);
                                     if(userAccount!=null){
@@ -231,9 +231,9 @@ public class loginScreen extends javax.swing.JPanel {
             //Step 2: Go inside each network and check each enterprise
                 for(Networking network:system.getNetworkList()){
                     //Step 2.a: check against each enterprise
-                    for(Enterprise enterprise:network.getEnterpriseDirectory().getEnterpriseList()){
+                    for(Enterprise enterprise:network.getEnterpriseDirectory().getEnterpriseDir()){
                         if(enterprise.getEnterpriseType().equals(enterprise.getEnterpriseType().Hospital)){
-                            for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList()){
+                            for(Organization organization:enterprise.getOrganizationalDirectory().getOrganizationList()){
                                 if(organization.getName().equals("Parents Organization")){
                                     userAccount=organization.getUserAccountDirectory().authenticateUser(userName, password);
                                     if(userAccount!=null){
@@ -259,9 +259,9 @@ public class loginScreen extends javax.swing.JPanel {
             //Step 2: Go inside each network and check each enterprise
                 for(Networking network:system.getNetworkList()){
                     //Step 2.a: check against each enterprise
-                    for(Enterprise enterprise:network.getEnterpriseDirectory().getEnterpriseList()){
+                    for(Enterprise enterprise:network.getEnterpriseDirectory().getEnterpriseDir()){
                         if(enterprise.getEnterpriseType().equals(enterprise.getEnterpriseType().FinancialEnterprise)){
-                            for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList()){
+                            for(Organization organization:enterprise.getOrganizationalDirectory().getOrganizationList()){
                                 if(organization.getName().equals("BankManager Organization")){
                                     userAccount=organization.getUserAccountDirectory().authenticateUser(userName, password);
                                     if(userAccount!=null){
@@ -287,9 +287,9 @@ public class loginScreen extends javax.swing.JPanel {
             //Step 2: Go inside each network and check each enterprise
                 for(Networking network:system.getNetworkList()){
                     //Step 2.a: check against each enterprise
-                    for(Enterprise enterprise:network.getEnterpriseDirectory().getEnterpriseList()){
+                    for(Enterprise enterprise:network.getEnterpriseDirectory().getEnterpriseDir()){
                         if(enterprise.getEnterpriseType().equals(enterprise.getEnterpriseType().FinancialEnterprise)){
-                            for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList()){
+                            for(Organization organization:enterprise.getOrganizationalDirectory().getOrganizationList()){
                                 if(organization.getName().equals("InsuranceManager Organization")){
                                     userAccount=organization.getUserAccountDirectory().authenticateUser(userName, password);
                                     if(userAccount!=null){
@@ -314,9 +314,9 @@ public class loginScreen extends javax.swing.JPanel {
             //Step 2: Go inside each network and check each enterprise
                 for(Networking network:system.getNetworkList()){
                     //Step 2.a: check against each enterprise
-                    for(Enterprise enterprise:network.getEnterpriseDirectory().getEnterpriseList()){
+                    for(Enterprise enterprise:network.getEnterpriseDirectory().getEnterpriseDir()){
                         if(enterprise.getEnterpriseType().equals(enterprise.getEnterpriseType().LegalEnterprise)){
-                            for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList()){
+                            for(Organization organization:enterprise.getOrganizationalDirectory().getOrganizationList()){
                                 if(organization.getName().equals("Lawyer Organization")){
                                     userAccount=organization.getUserAccountDirectory().authenticateUser(userName, password);
                                     if(userAccount!=null){

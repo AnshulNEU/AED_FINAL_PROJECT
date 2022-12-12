@@ -44,7 +44,7 @@ public class LegalManageEmployeeJPanel extends javax.swing.JPanel {
     public void populateOrganizationEmpComboBox(){
         organizationEmpJComboBox.removeAllItems();
         
-        for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()){
+        for (Organization organization : enterprise.getOrganizationalDirectory().getOrganizationList()){
             organizationEmpJComboBox.addItem(organization);
         }
     }
@@ -60,10 +60,10 @@ public class LegalManageEmployeeJPanel extends javax.swing.JPanel {
         
         model.setRowCount(0);
         
-        for (Lawyer employee : organization.getEmployeeDirectory().getLawyerList()){
+        for (Lawyer employee : organization.getEmployeeDirectory().getLawyerDir()){
             Object[] row = new Object[2];
-            row[0] = employee.getId();
-            row[1] = employee.getName();
+            row[0] = employee.getEmpId();
+            row[1] = employee.getEmpName();
             model.addRow(row);
         }
     }

@@ -19,7 +19,7 @@ public class BirthMother {
     private String username;
     private int id;
     private static int count = new Random().nextInt(100);
-    private String emailId;
+    private String emailID;
       private String imgPath;
     private String firstName;
     private String lastName;
@@ -34,23 +34,23 @@ public class BirthMother {
     
 
     private String address;
-    private String counselor;
+    private String counsellor;
     private ArrayList<Parents> acceptedParents;
     private InsuranceAccount insurance;
     private Parents finalizedParent;
    
     
  
-    private int bankBalance;
+    private int bankBal;
     private int parentAidfund;
-    private int netfunding; 
+    private int netFunds; 
 
     
     private int loanRequestAmount;
     private int loanAmountApproved;
     private int requiredFund;
-    private int insuranceAmount;
-    private int ownFunds;
+    private int insuranceAmt;
+    private int ownedFunds;
 
     private String contactMother;
 
@@ -68,8 +68,8 @@ public class BirthMother {
         return requiredFund;
     }
 
-    public int getOwnFunds() {
-        return ownFunds;
+    public int getOwnedFunds() {
+        return ownedFunds;
     }
 
     public int getTypeL() {
@@ -80,8 +80,8 @@ public class BirthMother {
         this.typeL = typeL;
     }
 
-    public void setOwnFunds(int ownFunds) {
-        this.ownFunds = ownFunds;
+    public void setOwnedFunds(int ownedFunds) {
+        this.ownedFunds = ownedFunds;
     }
 
     public void setRequiredFund(int requiredFund) {
@@ -89,10 +89,10 @@ public class BirthMother {
     }
 
     public int getNetFunding(){
-        if (requiredFund !=0 && bankBalance!=0){
-            netfunding = requiredFund - (bankBalance + parentAidfund);
+        if (requiredFund !=0 && bankBal!=0){
+            netFunds = requiredFund - (bankBal + parentAidfund);
         }
-        return netfunding;
+        return netFunds;
     }
 
     public int getLoanRequestAmount() {
@@ -112,17 +112,17 @@ public class BirthMother {
         this.loanAmountApproved = loanAmountApproved;
     }
 
-    public void setNetfunding(int netfunding) {
-        this.netfunding = netfunding;
+    public void setNetFunds(int netFunds) {
+        this.netFunds = netFunds;
     }
     
    
-    public int getBankBalance() {
-        return bankBalance;
+    public int getBankBal() {
+        return bankBal;
     }
 
-    public void setBankBalance(int bankBalance) {
-        this.bankBalance = bankBalance;
+    public void setBankBal(int bankBal) {
+        this.bankBal = bankBal;
     }
 
     public int getParentAidfund() {
@@ -162,12 +162,12 @@ public class BirthMother {
         return address;
     }
 
-    public String getCounselor() {
-        return counselor;
+    public String getCounsellor() {
+        return counsellor;
     }
 
-    public void setCounselor(String counselor) {
-        this.counselor = counselor;
+    public void setCounsellor(String counsellor) {
+        this.counsellor = counsellor;
     }
 
     public InsuranceAccount getInsurance() {
@@ -178,12 +178,12 @@ public class BirthMother {
         this.insurance = insurance;
     }
 
-    public int getInsuranceAmount() {
-        return insuranceAmount;
+    public int getInsuranceAmt() {
+        return insuranceAmt;
     }
 
-    public void setInsuranceAmount(int insuranceAmount) {
-        this.insuranceAmount = insuranceAmount;
+    public void setInsuranceAmt(int insuranceAmt) {
+        this.insuranceAmt = insuranceAmt;
     }
 
     public void setAddress(String address) {
@@ -228,17 +228,17 @@ public class BirthMother {
         id = count;
         count++;
         this.Hospital =new String();
-        this.emailId =new String();
+        this.emailID =new String();
         this.password =new String();
         this.username =new String();
         this.loanaccount = new LoanAccount();
         this.insurance = new InsuranceAccount();
         acceptedParents = new ArrayList<>();
      this.requiredFund =0;
-     this.insuranceAmount =0;
-     this.bankBalance = 0;
+     this.insuranceAmt =0;
+     this.bankBal = 0;
      this.parentAidfund =0;
-     this.netfunding = 0;
+     this.netFunds = 0;
                 
     }
 
@@ -260,12 +260,12 @@ public class BirthMother {
         return username;
     }
 
-    public String getEmailId() {
-        return emailId;
+    public String getEmailID() {
+        return emailID;
     }
 
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
+    public void setEmailID(String emailID) {
+        this.emailID = emailID;
     }
 
     public String getPassword() {
@@ -290,20 +290,20 @@ public class BirthMother {
         this.username = username;
         this.firstName = firstName;
         this.lastName = LastName;
-        this.emailId = email;
+        this.emailID = email;
         this.bloodGroup = blood;
-        //this.bankBalance = fund;
+        //this.bankBal = fund;
         this.contactMother = contact;
         this.address = address;
         this.imgPath = imgPath;
        
     }
-//    public void setValues(String firstName, String LastName, String email, int bankBalance, String address) {
+//    public void setValues(String firstName, String LastName, String email, int bankBal, String address) {
 //        this.firstName = firstName;
 //        this.lastName = LastName;
-//        this.emailId = email;
-//        this.ownFunds = bankBalance;
-//        this.bankBalance = bankBalance;
+//        this.emailID = email;
+//        this.ownedFunds = bankBal;
+//        this.bankBal = bankBal;
 //        this.address = address;
 //        this.imgPath = imgPath;
 //    } 

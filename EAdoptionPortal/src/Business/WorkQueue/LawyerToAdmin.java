@@ -12,34 +12,34 @@ import Business.People.Parents;
  * @author nihil
  */
 public class LawyerToAdmin extends WorkRequests{
-    private String requestResult;
+    private String reqResult;
      private Parents parent;
-     private BirthMother birthMother;
+     private BirthMother mother;
      
      public LawyerToAdmin(String message, Parents parent) {
         super();
         super.setMessage(message);
         super.setStatus("Pending");
-        this.requestResult = new String();
+        this.reqResult = new String();
         this.parent = parent;   
-        this.birthMother = new BirthMother();
+        this.mother = new BirthMother();
     }
     
     public LawyerToAdmin(String message, BirthMother BM) {
         super();
         super.setMessage(message);
         super.setStatus("Pending");
-        this.requestResult = new String();
-        this.birthMother = BM;   
+        this.reqResult = new String();
+        this.mother = BM;   
         this.parent = new Parents();
     }
 
-    public BirthMother getBirthMother() {
-        return birthMother;
+    public BirthMother getMother() {
+        return mother;
     }
 
-    public void setBirthMother(BirthMother birthMother) {
-        this.birthMother = birthMother;
+    public void setMother(BirthMother mother) {
+        this.mother = mother;
     }
 
 
@@ -52,15 +52,15 @@ public class LawyerToAdmin extends WorkRequests{
     }
 
     public LawyerToAdmin(String requestResult) {
-        this.requestResult = requestResult;
+        this.reqResult = requestResult;
     }
 
-    public String getRequestResult() {
-        return requestResult;
+    public String getReqResult() {
+        return reqResult;
     }
 
-    public void setRequestResult(String requestResult) {
-        this.requestResult = requestResult;
+    public void setReqResult(String reqResult) {
+        this.reqResult = reqResult;
     }
      
     @Override

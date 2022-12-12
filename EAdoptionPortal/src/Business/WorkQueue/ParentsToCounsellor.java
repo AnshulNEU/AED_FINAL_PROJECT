@@ -14,25 +14,25 @@ import java.util.Date;
  * @author anshulsingh
  */
 public class ParentsToCounsellor extends WorkRequests{
-    private String requestResult;
+    private String reqResult;
     private Parents parent;
-    private String counsellorFeeback;
+    private String counsellorFeedback;
 
     public ParentsToCounsellor(String message, Parents parent) {
         super();
         super.setMessage(message);
         super.setStatus("Pending");
-        this.requestResult = new String();
+        this.reqResult = new String();
         this.parent = parent;
-        this.counsellorFeeback = new String();   
+        this.counsellorFeedback = new String();   
     }
 
-    public String getRequestResult() {
-        return requestResult;
+    public String getReqResult() {
+        return reqResult;
     }
 
-    public void setRequestResult(String requestResult) {
-        this.requestResult = requestResult;
+    public void setReqResult(String reqResult) {
+        this.reqResult = reqResult;
     }
 
     public Parents getParent() {
@@ -43,11 +43,11 @@ public class ParentsToCounsellor extends WorkRequests{
         this.parent = p;
     }
 
-    public String getCounsellorFeeback() {
-        return counsellorFeeback;
+    public String getCounsellorFeedback() {
+        return counsellorFeedback;
     }
 
-    public void setCounsellorFeeback(String counsellorFeeback) {
-        this.counsellorFeeback = counsellorFeeback;
+    public void setCounsellorFeedback(String counsellorFeedback) {
+        this.counsellorFeedback = counsellorFeedback;
     }
 }

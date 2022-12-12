@@ -17,8 +17,8 @@ import javax.swing.JPanel;
 public abstract class Role {
     
     public enum RoleType{
-        FinanceAdmin("FinanceAdmin"),
-        Counselor("Counselor"),
+        FinancialAdmin("FinanceAdmin"),
+        Counsellor("Counselor"),
         BankManager("BankManager"),
         InsuranceManager("InsuranceManager"),
         HospitalAdmin ("HospitalAdmin"),

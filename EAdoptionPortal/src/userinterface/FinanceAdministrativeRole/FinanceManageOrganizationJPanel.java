@@ -49,7 +49,7 @@ public class FinanceManageOrganizationJPanel extends javax.swing.JPanel {
         
         model.setRowCount(0);
         
-        for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()){
+        for (Organization organization : enterprise.getOrganizationalDirectory().getOrganizationList()){
             Object[] row = new Object[2];
             row[0] = organization.getOrganizationID();
             row[1] = organization.getName();
@@ -179,8 +179,8 @@ public class FinanceManageOrganizationJPanel extends javax.swing.JPanel {
     private void addJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addJButtonActionPerformed
 
         Type type = (Type) organizationJComboBox.getSelectedItem();
-        if(!enterprise.getOrganizationDirectory().containsType(type)){
-        enterprise.getOrganizationDirectory().createOrganization(type);
+        if(!enterprise.getOrganizationalDirectory().containsType(type)){
+        enterprise.getOrganizationalDirectory().createOrganization(type);
         populateTable();
         }
         else{

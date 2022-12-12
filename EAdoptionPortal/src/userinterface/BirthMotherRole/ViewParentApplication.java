@@ -391,11 +391,11 @@ public class ViewParentApplication extends javax.swing.JPanel {
         else
             txtUsername.setText("unavailable");
         if (parent.getUsername() != null){
-        txtEmail.setText(parent.getEmail());
+        txtEmail.setText(parent.getEmailID());
         }
         else
             txtUsername.setText("unavailable");
-        boolean worstCaseScenerio = parent.isWorstCaseScenerio();
+        boolean worstCaseScenerio = parent.isWorstCaseScenario();
         if(worstCaseScenerio == true){
             isPrepared.setSelected(true);
         }
@@ -416,7 +416,7 @@ public class ViewParentApplication extends javax.swing.JPanel {
             isComfortable.setSelected(true);
         }
         else notComfortable.setSelected(true);
-        boolean currChildrenOnBoard = parent.isCurrChildrenOnBoard();
+        boolean currChildrenOnBoard = parent.isCurrentChildrenOnBoard();
         if(currChildrenOnBoard == true){
             isChildrenOnBoard.setSelected(true);
         }
@@ -426,7 +426,7 @@ public class ViewParentApplication extends javax.swing.JPanel {
             isEducated.setSelected(true);
         }
         else notEducated.setSelected(true);
-        boolean promises = parent.isPromises();
+        boolean promises = parent.isPromise();
         if(promises == true){
             isPromise.setSelected(true);
         }
@@ -461,7 +461,7 @@ public class ViewParentApplication extends javax.swing.JPanel {
         }
         
         request = new BirthMotherParent(birthMother, parent);
-        request.setRequestResult("Accepted by Mother");
+        request.setReqResult("Accepted by Mother");
         request.setMessage(message);
    /*     for(Organization o : enterprise.getOrganizationDirectory().getOrganizationList()){
             if(o.getName().equals(Organization.Type.ParentsOrg.getValue())){
@@ -480,7 +480,7 @@ public class ViewParentApplication extends javax.swing.JPanel {
         SuccessDialog d = new SuccessDialog("Successfully Accepted Parent.");
         d.setVisible(true);
         
-        enterprise.getWorkQueue().getBirthMotherToParent().add(request);
+        enterprise.getWorkQueue().getBirthMotherParent().add(request);
         userProcessContainer.remove(this);
         CardLayout cardlayout = (CardLayout) userProcessContainer.getLayout();
         cardlayout.previous(userProcessContainer);

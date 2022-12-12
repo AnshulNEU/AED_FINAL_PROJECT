@@ -50,7 +50,7 @@ public class ParentDashboard extends javax.swing.JPanel {
     private void populateParentDetails(){
         lblName.setText(mother.getFirstName() +" "+ mother.getLastName());
         lblAddress.setText(mother.getAddress());
-        lblEmail.setText(mother.getEmailId());
+        lblEmail.setText(mother.getEmailID());
         lblContact.setText(mother.getContactMother());
         lblSupportAmount.setText(String.valueOf(parent.getFunds()));
         if (lblSupportAmount == null){
@@ -385,8 +385,8 @@ public class ParentDashboard extends javax.swing.JPanel {
         if(remainingValue > 0){
         value = Integer.parseInt(txtEnterFunds.getText());
         
-        int total = mother.getBankBalance() + value;
-        mother.setBankBalance(total);
+        int total = mother.getBankBal() + value;
+        mother.setBankBal(total);
         parentValue = parent.getFunds();
         
         

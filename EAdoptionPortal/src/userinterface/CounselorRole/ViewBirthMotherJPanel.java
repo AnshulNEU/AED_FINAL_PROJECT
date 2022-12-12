@@ -224,7 +224,7 @@ public class ViewBirthMotherJPanel extends javax.swing.JPanel {
     private void btnApproveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApproveActionPerformed
         request.setReceiver(account);
         request.setResolveDate(new Date());
-        request.setRequestResult("Completed by Counselor" + account.getCounselor().getName());
+        request.setRequestResult("Completed by Counselor" + account.getCounselor().getEmpName());
      
         String msg = messageTxt.getText();
         if(msg.equals("")){
@@ -246,7 +246,7 @@ public class ViewBirthMotherJPanel extends javax.swing.JPanel {
               throw new NullPointerException("Enter funds");
         }
         
-        request.setCounsellorFeeback(msg);
+        request.setCounsellorFeedback(msg);
         request.setMessage(msg);
         request.getBirthMother().setRequiredFund(totalfund);
 
@@ -256,7 +256,7 @@ public class ViewBirthMotherJPanel extends javax.swing.JPanel {
         counselorReq.setStatus("Processing");
         counselorReq.setSender(account);
         
-        enterprise.getWorkQueue().getCounselorToAdmin().add(counselorReq);
+        enterprise.getWorkQueue().getCounselorAdmin().add(counselorReq);
         
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
@@ -273,7 +273,7 @@ public class ViewBirthMotherJPanel extends javax.swing.JPanel {
         //hospitalJComboBox.removeAllItems();
         String msg = new String();
         userNameTxt.setText(request.getBirthMother().getUsername());
-        emailTxt.setText(request.getBirthMother().getEmailId());
+        emailTxt.setText(request.getBirthMother().getEmailID());
         patientIDTxt.setText(String.valueOf(request.getBirthMother().getId()));
        
   
@@ -282,7 +282,7 @@ public class ViewBirthMotherJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         request.setReceiver(account);
         request.setResolveDate(new Date());
-        request.setRequestResult("Rejected by " + account.getCounselor().getName());
+        request.setRequestResult("Rejected by " + account.getCounselor().getEmpName());
         
      
         String msg = messageTxt.getText();
@@ -291,7 +291,7 @@ public class ViewBirthMotherJPanel extends javax.swing.JPanel {
               throw new NullPointerException("Enter message");
         }
         request.setStatus("Rejected");
-        request.setCounsellorFeeback(msg);
+        request.setCounsellorFeedback(msg);
         request.setMessage(msg);
         request.setSender(account);
         

@@ -15,13 +15,13 @@ import Business.People.Parents;
  */
 public class BirthMotherLoan extends WorkRequests{
     private BirthMother birthMother;
-    private LoanAccount loan;
+    private LoanAccount loanAcc;
 
     public BirthMotherLoan(String message, LoanAccount loan, BirthMother bm) {
         super();
         super.setMessage(message);
         super.setStatus("Pending");
-        this.loan = loan;
+        this.loanAcc = loan;
         this.birthMother =bm;
     }
 
@@ -33,12 +33,12 @@ public class BirthMotherLoan extends WorkRequests{
         this.birthMother = birthMother;
     }
     
-    public LoanAccount getLoan() {
-        return loan;
+    public LoanAccount getLoanAcc() {
+        return loanAcc;
     }
 
-    public void setLoan(LoanAccount loan) {
-        this.loan = loan;
+    public void setLoanAcc(LoanAccount loanAcc) {
+        this.loanAcc = loanAcc;
     }
 
     @Override

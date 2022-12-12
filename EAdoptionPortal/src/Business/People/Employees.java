@@ -13,31 +13,31 @@ import java.util.Random;
  */
 public class Employees {
     
-    private String name;
-    private int id;
+    private String empName;
+    private int empId;
     private static int count = new Random().nextInt(100);
 
     public Employees() {
-        id = count;
+        empId = count;
         count++;
     }
 
-    public int getId() {
-        return id;
+    public int getEmpId() {
+        return empId;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setEmpName(String empName) {
+        this.empName = empName;
     }
 
     
-    public String getName() {
-        return name;
+    public String getEmpName() {
+        return empName;
     }
 
     @Override
     public String toString() {
-        return name;
+        return empName;
     }
     
     

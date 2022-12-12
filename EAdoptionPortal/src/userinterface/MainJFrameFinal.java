@@ -24,7 +24,7 @@ public class MainJFrameFinal extends javax.swing.JFrame {
      */
     private EcoSystem system;
     private DB4O dB4OUtil = DB4O.getInstance();
-  public static OrphanageDirectory orphanageDirectory;
+    public static OrphanageDirectory orphanageDirectory;
     
     public MainJFrameFinal() {
         initComponents();

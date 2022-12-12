@@ -12,7 +12,7 @@ import Business.People.Orphanage;
  * @author anshulsingh
  */
 public class OrphanageToLawyer {
-    private String requestResult;
+    private String reqResult;
     private Orphanage orphanage;
     private String lawyerFeedback;
     private Lawyer lawyer;
@@ -23,17 +23,17 @@ public class OrphanageToLawyer {
 
     public OrphanageToLawyer(Lawyer lawyer) {
         super();
-        this.requestResult = new String();
+        this.reqResult = new String();
         this.orphanage = orphanage;
         this.lawyerFeedback = new String();
     }
 
-    public String getRequestResult() {
-        return requestResult;
+    public String getReqResult() {
+        return reqResult;
     }
 
-    public void setRequestResult(String requestResult) {
-        this.requestResult = requestResult;
+    public void setReqResult(String reqResult) {
+        this.reqResult = reqResult;
     }
 
     public Orphanage getOrphanage() {

@@ -35,7 +35,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
     
     public void populateTree(){
         DefaultTreeModel model=(DefaultTreeModel)jTree.getModel();
-        ArrayList<Networking> networkList=ecosystem.getNetworkList();
+        ArrayList<Networking> netList=ecosystem.getNetworkList();
         ArrayList<Enterprise> enterpriseList;
         ArrayList<Organization> organizationList;
         
@@ -52,18 +52,18 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         DefaultMutableTreeNode enterpriseNode;
         DefaultMutableTreeNode organizationNode;
         
-        for(int i=0;i<networkList.size();i++){
-            network=networkList.get(i);
+        for(int i=0;i<netList.size();i++){
+            network=netList.get(i);
             networkNode=new DefaultMutableTreeNode(network.getName());
             networks.insert(networkNode, i);
             
-            enterpriseList=network.getEnterpriseDirectory().getEnterpriseList();
+            enterpriseList=network.getEnterpriseDirectory().getEnterpriseDir();
             for(int j=0; j<enterpriseList.size();j++){
                 enterprise=enterpriseList.get(j);
                 enterpriseNode=new DefaultMutableTreeNode(enterprise.getName());
                 networkNode.insert(enterpriseNode, j);
                 
-                organizationList=enterprise.getOrganizationDirectory().getOrganizationList();
+                organizationList=enterprise.getOrganizationalDirectory().getOrganizationList();
                 for(int k=0;k<organizationList.size();k++){
                     organization=organizationList.get(k);
                     organizationNode=new DefaultMutableTreeNode(organization.getName());

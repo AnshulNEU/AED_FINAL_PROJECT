@@ -25,7 +25,7 @@ public class ConfigSystem {
     public static EcoSystem configure(){
         system = EcoSystem.getInstance();     
         Employees employee = system.getEmployeeDirectory().createandaddEmployee("sysadmin");
-        UserAcc ua = system.getUserAccountDirectory().createUserAccount("sysadmin", "sysadmin", employee, new SystemAdminRole());
+        UserAcc  userAcc = system.getUserAccountDirectory().createUserAccount("sysadmin", "sysadmin", employee, new SystemAdminRole());
         ConfigSystem configure = new ConfigSystem();
         configure.configureNetwork();
         return system;
@@ -45,7 +45,7 @@ public class ConfigSystem {
         Employees employee = hospital.getEmployeeDirectory().createandaddEmployee("Boston Hospital Admin");
         UserAcc account = hospital.getUserAccountDirectory().createUserAccount("hadmin", "hadmin", employee, new HospitalsAdminRole(), network.getName());
         
-        Organization organization = hospital.getOrganizationDirectory().createOrganization(Organization.Type.Counselor);
+        Organization organization = hospital.getOrganizationalDirectory().createOrganization(Organization.Type.Counselor);
      
         
         Counselor employee1 = organization.getEmployeeDirectory().createandaddCounselor("Counselor");
@@ -56,7 +56,7 @@ public class ConfigSystem {
         account = financial.getUserAccountDirectory().createUserAccount("fadmin", "fadmin", employee, new FinancialAdminRole(),network.getName());
      
         
-        organization = financial.getOrganizationDirectory().createOrganization(Organization.Type.BankManager);
+        organization = financial.getOrganizationalDirectory().createOrganization(Organization.Type.BankManager);
         
         Banker employee2 = organization.getEmployeeDirectory().createandaddBankManager("Bank Manager");
         
@@ -64,7 +64,7 @@ public class ConfigSystem {
         account = organization.getUserAccountDirectory().createBankManagerUserAccount("bmanager", "bmanager", employee2, new BankerRole(),network.getName());
         
     
-        Organization organization1 = financial.getOrganizationDirectory().createOrganization(Organization.Type.InsuranceManager);
+        Organization organization1 = financial.getOrganizationalDirectory().createOrganization(Organization.Type.InsuranceManager);
         
         
         InsuranceManager employee3 = organization1.getEmployeeDirectory().createandadInsuranceManager("Insurance Manager");
@@ -72,8 +72,8 @@ public class ConfigSystem {
         
         account.setNetwork(network.getName());
         
-        hospital.getOrganizationDirectory().createOrganization(Organization.Type.BirthMotherOrg);
-        hospital.getOrganizationDirectory().createOrganization(Organization.Type.ParentsOrg);
+        hospital.getOrganizationalDirectory().createOrganization(Organization.Type.BirthMotherOrg);
+        hospital.getOrganizationalDirectory().createOrganization(Organization.Type.ParentsOrg);
         
         
     }

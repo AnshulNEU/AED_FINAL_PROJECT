@@ -12,31 +12,31 @@ import java.util.ArrayList;
  * @author nihil
  */
 public class OrphanageDirectory {
-     private ArrayList<Orphanage> orphanageList;
+     private ArrayList<Orphanage> orphanageDir;
 
     public OrphanageDirectory() {
-        orphanageList = new ArrayList();
+        orphanageDir = new ArrayList();
     }
 
     public ArrayList<Orphanage> getorphanageList() {
-        return orphanageList;
+        return orphanageDir;
     }
     
     public Orphanage createOrphanage(String name){
         Orphanage orphanage = new Orphanage();
         orphanage.setUsername(name);
-        orphanageList.add(orphanage);
+        orphanageDir.add(orphanage);
         return orphanage;
     }
     
     public void addOrphanage(Orphanage o){
-        this.orphanageList.add(o);
+        this.orphanageDir.add(o);
     }
 public ArrayList<Orphanage> getPendingOrphanages() {
 
     ArrayList<Orphanage> pending = new ArrayList<>();
 
-    for(Orphanage orphanage : orphanageList){
+    for(Orphanage orphanage : orphanageDir){
       if(orphanage.status == Orphanage.Status.PENDING){
         pending.add(orphanage);
       }
@@ -49,7 +49,7 @@ public ArrayList<Orphanage> getPendingOrphanages() {
 
     ArrayList<Orphanage> approved = new ArrayList<>();
 
-    for(Orphanage orphanage : orphanageList){
+    for(Orphanage orphanage : orphanageDir){
       if(orphanage.status == Orphanage.Status.APPROVED){
         approved.add(orphanage);
       }

@@ -44,12 +44,12 @@ public class UpdateBankInformation extends javax.swing.JPanel {
         txtFirstName.setText(BirthMother.getFirstName());
         txtLastName.setText(BirthMother.getLastName());
         txtAddress.setText(BirthMother.getAddress());
-        txtEmail.setText(BirthMother.getEmailId());
-        txtFirstName1.setText(String.valueOf(BirthMother.getLoanaccount().getBankAccountNumber()));
-        txtInsuranceApproved.setText(String.valueOf(BirthMother.getInsuranceAmount()));
+        txtEmail.setText(BirthMother.getEmailID());
+        txtFirstName1.setText(String.valueOf(BirthMother.getLoanaccount().getBankAccountNum()));
+        txtInsuranceApproved.setText(String.valueOf(BirthMother.getInsuranceAmt()));
         txtLoanApproved.setText(String.valueOf(BirthMother.getLoanAmountApproved()));
         txtParentAid.setText(String.valueOf(BirthMother.getParentAidfund()));
-        txtBankBalance.setText(String.valueOf(BirthMother.getBankBalance()));
+        txtBankBalance.setText(String.valueOf(BirthMother.getBankBal()));
         
     }
 
@@ -291,12 +291,12 @@ public class UpdateBankInformation extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
     private void checkButton(){
-    if(BirthMother.getOwnFunds() == 0){
+    if(BirthMother.getOwnedFunds() == 0){
             txtOwnFunds.setEnabled(true);
             btnUpdate.setEnabled(true);
         }
         else{
-            txtOwnFunds.setText(String.valueOf(BirthMother.getOwnFunds()));
+            txtOwnFunds.setText(String.valueOf(BirthMother.getOwnedFunds()));
             txtOwnFunds.setEnabled(false);
             btnUpdate.setEnabled(false);
         }}
@@ -321,11 +321,11 @@ public class UpdateBankInformation extends javax.swing.JPanel {
         this.funds = Integer.parseInt(txtOwnFunds.getText());
         if(funds > 0){
         
-        BirthMother.setOwnFunds(funds);
-        BirthMother.setBankBalance(funds);
+        BirthMother.setOwnedFunds(funds);
+        BirthMother.setBankBal(funds);
         BirthMother.getNetFunding();
       
-        BirthMother.getLoanaccount().addValues1(BirthMother.getEmailId(), BirthMother.getOwnFunds(), BirthMother.getAddress(), BirthMother.getAddress(), BirthMother.getImgPath());
+        BirthMother.getLoanaccount().addValues1(BirthMother.getEmailID(), BirthMother.getOwnedFunds(), BirthMother.getAddress(), BirthMother.getAddress(), BirthMother.getImgPath());
   
         SuccessDialog d = new SuccessDialog("Successfully updated Bank Account Details.");
                                 d.setVisible(true);

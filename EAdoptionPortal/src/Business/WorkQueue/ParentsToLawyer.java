@@ -11,7 +11,7 @@ import Business.People.Parents;
  * @author anshulsingh
  */
 public class ParentsToLawyer extends WorkRequests{
-    private String requestResult;
+    private String reqResult;
     private Parents parent;
     private String lawyerFeedback;
 
@@ -19,17 +19,17 @@ public class ParentsToLawyer extends WorkRequests{
         super();
         super.setMessage(message);
         super.setStatus("Pending");
-        this.requestResult = new String();
+        this.reqResult = new String();
         this.parent = parent;
         this.lawyerFeedback = new String();   
     }
 
-    public String getRequestResult() {
-        return requestResult;
+    public String getReqResult() {
+        return reqResult;
     }
 
-    public void setRequestResult(String requestResult) {
-        this.requestResult = requestResult;
+    public void setReqResult(String reqResult) {
+        this.reqResult = reqResult;
     }
 
     public Parents getParent() {

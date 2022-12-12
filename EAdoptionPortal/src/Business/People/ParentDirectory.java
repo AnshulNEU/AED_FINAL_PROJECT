@@ -12,26 +12,26 @@ import java.util.ArrayList;
  */
 public class ParentDirectory {
     
-    private ArrayList<Parents> parentsList;
+    private ArrayList<Parents> parentsDir;
 
     public ParentDirectory() {
-        parentsList = new ArrayList();
+        parentsDir = new ArrayList();
     }
 
-    public ArrayList<Parents> getParentsList() {
-        return parentsList;
+    public ArrayList<Parents> getParentsDir() {
+        return parentsDir;
     }
     
     
     public Parents createParents(String name){
         Parents parents = new Parents();
         parents.setUsername(name);
-        parentsList.add(parents);
+        parentsDir.add(parents);
         return parents;
     }
     
     public Parents addParents(Parents parent){
-        parentsList.add(parent);
+        parentsDir.add(parent);
         return parent;
     }
 }

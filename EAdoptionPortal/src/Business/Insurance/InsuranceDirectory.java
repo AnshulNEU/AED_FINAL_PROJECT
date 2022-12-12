@@ -12,18 +12,18 @@ import java.util.ArrayList;
  * @author anshulsingh
  */
 public class InsuranceDirectory {
-        private ArrayList<InsuranceAccount> insuranceList;
+        private ArrayList<InsuranceAccount> insuranceDir;
 
     public InsuranceDirectory() {
-        insuranceList = new ArrayList();
+        insuranceDir = new ArrayList();
     }
 
-    public ArrayList<InsuranceAccount> getInsuranceList() {
-        return insuranceList;
+    public ArrayList<InsuranceAccount> getInsuranceDir() {
+        return insuranceDir;
     }
  
     public InsuranceAccount addInsurance(InsuranceAccount ins){
-        insuranceList.add(ins);
+        insuranceDir.add(ins);
         return ins;
     }
 }

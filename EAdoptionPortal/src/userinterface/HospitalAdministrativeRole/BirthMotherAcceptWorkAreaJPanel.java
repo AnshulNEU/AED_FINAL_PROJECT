@@ -54,7 +54,7 @@ public class BirthMotherAcceptWorkAreaJPanel extends javax.swing.JPanel {
     }
     
     public void populateComboBox(){
-        for(Enterprise e: network.getEnterpriseDirectory().getEnterpriseList()){
+        for(Enterprise e: network.getEnterpriseDirectory().getEnterpriseDir()){
             if(e.getEnterpriseType().getValue().equals(Enterprise.EnterpriseType.FinancialEnterprise.getValue())){
                  bankComboBox.addItem(e);
                 }
@@ -70,7 +70,7 @@ public class BirthMotherAcceptWorkAreaJPanel extends javax.swing.JPanel {
         
         model.setRowCount(0);
 
-        for (CounsellorsToAdmin request : enterprise.getWorkQueue().getCounselorToAdmin()){
+        for (CounsellorsToAdmin request : enterprise.getWorkQueue().getCounselorAdmin()){
             if(!(request.getBirthMother().getUsername().equals(""))){
             
                 Object[] row = new Object[5];
@@ -84,7 +84,7 @@ public class BirthMotherAcceptWorkAreaJPanel extends javax.swing.JPanel {
                         row[3] = "";
                 else
                         row[3] = request.getStatus();
-                String result = request.getRequestResult();
+                String result = request.getReqResult();
                 row[4] = result == null ? "Waiting" : result;
 
                 model.addRow(row);
@@ -328,11 +328,11 @@ public class BirthMotherAcceptWorkAreaJPanel extends javax.swing.JPanel {
         }
         else{
 
-        for (Organization org : enterprise.getOrganizationDirectory().getOrganizationList()){
+        for (Organization org : enterprise.getOrganizationalDirectory().getOrganizationList()){
             if(org.getName().equals("BirthMother Organization")){
                 if (org.getUserAccountDirectory().checkIfUsernameIsUnique(txtUserName.getText())){
                     request.setStatus("Completed");
-                    request.setRequestResult("User Account Created");
+                    request.setReqResult("User Account Created");
                     request.setReceiver(account);
                     birthMother = request.getBirthMother();
                     Role role = new BirthMotherRole();
@@ -340,7 +340,7 @@ public class BirthMotherAcceptWorkAreaJPanel extends javax.swing.JPanel {
                     org.getUserAccountDirectory().createUserAccountMother(birthMother.getFirstName(), txtUserName.getText(),txtPassword.getText() , birthMother, role, account.getNetwork() );
                         
                     HospitalToBank h = new HospitalToBank(messageTxt.getText(), birthMother);
-                    f.getWorkQueue().getHospitalAdminToBank().add(h);
+                    f.getWorkQueue().getHospitalAdminBank().add(h);
 
                     
                     SuccessDialog d = new SuccessDialog("Birth Mother account created successfully.");
@@ -350,7 +350,7 @@ public class BirthMotherAcceptWorkAreaJPanel extends javax.swing.JPanel {
                             + request.getBirthMother().getUsername() + "</br> <br> Pssword:  "+ request.getBirthMother().getPassword() + "</br>"+"<br>Your Patient ID is " + request.getBirthMother().getId()
                             + "</br> <br> Kindly update your profile by logging into our Application ! </br> </body> <h2> Thank you! </h2>";
 
-                    EmailGenerator em = new EmailGenerator(request.getBirthMother().getEmailId(), message , "Request Approved" );
+                    EmailGenerator em = new EmailGenerator(request.getBirthMother().getEmailID(), message , "Request Approved" );
                     em.sendEmail();
                     
                     populateRequestTable();

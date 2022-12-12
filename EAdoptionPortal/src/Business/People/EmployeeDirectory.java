@@ -12,93 +12,93 @@ import java.util.ArrayList;
  */
 public class EmployeeDirectory {
  
-    private ArrayList<Employees> employeeList;
-    private ArrayList<Counselor> counselorlist;
-    private ArrayList<Banker> bankManagerList;
-    private ArrayList<InsuranceManager> insuranceManagerList;
-    private ArrayList<Lawyer> lawyerList;
+    private ArrayList<Employees> employeeDir;
+    private ArrayList<Counselor> counselorDir;
+    private ArrayList<Banker> bankManagerDir;
+    private ArrayList<InsuranceManager> insuranceManagerDir;
+    private ArrayList<Lawyer> lawyerDir;
 
 
     
     
 
     public EmployeeDirectory() {
-        counselorlist = new ArrayList<>();
-        bankManagerList = new ArrayList<>();
-        insuranceManagerList = new ArrayList<>();
-        lawyerList = new ArrayList<>();        
+        counselorDir = new ArrayList<>();
+        bankManagerDir = new ArrayList<>();
+        insuranceManagerDir = new ArrayList<>();
+        lawyerDir = new ArrayList<>();        
                 
-        employeeList = new ArrayList();
+        employeeDir = new ArrayList();
     }
-    public ArrayList<Lawyer> getLawyerList() {
-        return lawyerList;
-    }
-
-    public void setLawyerList(ArrayList<Lawyer> lawyerList) {
-        this.lawyerList = lawyerList;
-    }
-    public ArrayList<Employees> getEmployeeList() {
-        return employeeList;
+    public ArrayList<Lawyer> getLawyerDir() {
+        return lawyerDir;
     }
 
-    public void setEmployeeList(ArrayList<Employees> employeeList) {
-        this.employeeList = employeeList;
+    public void setLawyerDir(ArrayList<Lawyer> lawyerDir) {
+        this.lawyerDir = lawyerDir;
+    }
+    public ArrayList<Employees> getEmployeeDir() {
+        return employeeDir;
+    }
+
+    public void setEmployeeDir(ArrayList<Employees> employeeDir) {
+        this.employeeDir = employeeDir;
     }
     
     public Employees createandaddEmployee (String name){
         Employees em = new Employees();
-        em.setName(name);
-        employeeList.add(em);
+        em.setEmpName(name);
+        employeeDir.add(em);
         return em;
     }
     
     public Counselor createandaddCounselor (String name){
         Counselor em = new Counselor();
-        em.setName(name);
-        counselorlist.add(em);
+        em.setEmpName(name);
+        counselorDir.add(em);
         return em;
     }
     public InsuranceManager createandadInsuranceManager (String name){
         InsuranceManager em = new InsuranceManager();
-        em.setName(name);
-        insuranceManagerList.add(em);
+        em.setEmpName(name);
+        insuranceManagerDir.add(em);
         return em;
     }
 
     public Banker createandaddBankManager (String name){
         Banker em = new Banker();
-        em.setName(name);
-        bankManagerList.add(em);
+        em.setEmpName(name);
+        bankManagerDir.add(em);
         return em;
     }
 
-    public ArrayList<Counselor> getCounselorlist() {
-        return counselorlist;
+    public ArrayList<Counselor> getCounselorDir() {
+        return counselorDir;
     }
 
-    public void setCounselorlist(ArrayList<Counselor> counselorlist) {
-        this.counselorlist = counselorlist;
+    public void setCounselorDir(ArrayList<Counselor> counselorDir) {
+        this.counselorDir = counselorDir;
     }
 
-    public ArrayList<Banker> getBankManagerList() {
-        return bankManagerList;
+    public ArrayList<Banker> getBankManagerDir() {
+        return bankManagerDir;
     }
 
-    public void setBankManagerList(ArrayList<Banker> bankManagerList) {
-        this.bankManagerList = bankManagerList;
+    public void setBankManagerDir(ArrayList<Banker> bankManagerDir) {
+        this.bankManagerDir = bankManagerDir;
     }
 
-    public ArrayList<InsuranceManager> getInsuranceManagerList() {
-        return insuranceManagerList;
+    public ArrayList<InsuranceManager> getInsuranceManagerDir() {
+        return insuranceManagerDir;
     }
 
-    public void setInsuranceManagerList(ArrayList<InsuranceManager> insuranceManagerList) {
-        this.insuranceManagerList = insuranceManagerList;
+    public void setInsuranceManagerDir(ArrayList<InsuranceManager> insuranceManagerDir) {
+        this.insuranceManagerDir = insuranceManagerDir;
     }
     public Lawyer createandaddLawyer (String name){
         Lawyer em = new Lawyer();
-        em.setName(name);
-        lawyerList.add(em);
+        em.setEmpName(name);
+        lawyerDir.add(em);
         return em;
     } 
     

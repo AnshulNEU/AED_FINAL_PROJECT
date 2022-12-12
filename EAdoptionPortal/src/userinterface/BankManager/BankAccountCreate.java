@@ -44,10 +44,10 @@ public class BankAccountCreate extends javax.swing.JPanel {
         this.userProcessContainer = userProcessContainer;
         this.enterprise = enterprise;
         
-        txtFirstName.setText(req.getBirthMother().getFirstName());
-        txtEmail.setText(req.getBirthMother().getEmailId());
-        txtHospital.setText(req.getBirthMother().getHospital());
-        txtCounselor.setText(req.getBirthMother().getCounselor());
+        txtFirstName.setText(req.getMother().getFirstName());
+        txtEmail.setText(req.getMother().getEmailID());
+        txtHospital.setText(req.getMother().getHospital());
+        txtCounselor.setText(req.getMother().getCounsellor());
         
     }
 
@@ -195,11 +195,11 @@ public class BankAccountCreate extends javax.swing.JPanel {
            
         LoanAccount loan= new LoanAccount();
         
-        loan = new LoanAccount(req.getBirthMother().getFirstName(), req.getBirthMother().getEmailId());
+        loan = new LoanAccount(req.getMother().getFirstName(), req.getMother().getEmailID());
         loan.setHospital(hospital);
-        loan.setCounselor(counselor);
+        loan.setCounsellor(counselor);
         enterprise.getLoanDirectory().addLoan(loan);
-        req.getBirthMother().setLoanaccount(loan);
+        req.getMother().setLoanaccount(loan);
         req.setReceiver(userAccount);
         req.setResolveDate(new Date());
         req.setStatus("Completed");
@@ -207,7 +207,7 @@ public class BankAccountCreate extends javax.swing.JPanel {
                      //   l.addValues(emailId, funds, address, passportNumber, docPath);
                       //  loan = l ;
           
-        JOptionPane.showMessageDialog(null, "Bank Account created created successfully! \n Account Number : "+ loan.getBankAccountNumber(),"information", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Bank Account created created successfully! \n Account Number : "+ loan.getBankAccountNum(),"information", JOptionPane.INFORMATION_MESSAGE);
         
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();

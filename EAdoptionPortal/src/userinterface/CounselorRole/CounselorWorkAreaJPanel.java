@@ -309,7 +309,7 @@ public class CounselorWorkAreaJPanel extends javax.swing.JPanel {
         
     
                try{
-            for (ParentsToCounsellor request : enterprise.getWorkQueue().getParentToCounselor()){
+            for (ParentsToCounsellor request : enterprise.getWorkQueue().getParentCounselor()){
 //            if(request.getCounsellor().getName().equals(userAccount.getCounselor().getName())){
                 if ("Completed".equals(request.getStatus())){
                         papproved++;
@@ -343,7 +343,7 @@ public class CounselorWorkAreaJPanel extends javax.swing.JPanel {
     
                try{
             for (BirthMotherCounselor request : enterprise.getWorkQueue().getBirthMotherToCounsellor()){
-            if(request.getCounsellor().getName().equals(userAccount.getCounselor().getName())){
+            if(request.getCounsellor().getEmpName().equals(userAccount.getCounselor().getEmpName())){
                 if ("Completed".equals(request.getStatus())){
                         approved++;
                 }

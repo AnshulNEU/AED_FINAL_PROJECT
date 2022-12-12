@@ -50,11 +50,11 @@ public class ViewBankAccount extends javax.swing.JPanel {
    
         
         txtFirstName.setText(loan.getFirstName());
-        txtEmail.setText(loan.getEmailId());
+        txtEmail.setText(loan.getEmailID());
         txtHospital.setText(loan.getHospital());
         txtAddress.setText(loan.getAddress());
-        txtFunds.setText(String.valueOf(loan.getBankBalance()));
-        txtPassport.setText(loan.getPassportNumber());
+        txtFunds.setText(String.valueOf(loan.getBankBal()));
+        txtPassport.setText(loan.getPassportNum());
         txtLastName.setText(loan.getLastName());
         
     }
@@ -284,7 +284,7 @@ public class ViewBankAccount extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBrowseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBrowseActionPerformed
-        if (loan.getDocPath() == null || loan.getDocPath() == ""){
+        if (loan.getDoctorPath() == null || loan.getDoctorPath() == ""){
         SwingUtilities.invokeLater(new Runnable(){
             public void run()
                 {
@@ -294,7 +294,7 @@ public class ViewBankAccount extends javax.swing.JPanel {
                 BufferedImage image = null;
                 try
                 {
-                    image = ImageIO.read(new File(loan.getDocPath()));
+                    image = ImageIO.read(new File(loan.getDoctorPath()));
                 }
                 catch (Exception e)
                 {

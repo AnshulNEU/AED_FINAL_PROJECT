@@ -44,12 +44,12 @@ public class ViewBankAccountRequest extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) workRequestJTable.getModel();
         
         model.setRowCount(0);
-        for (HospitalToBank request : enterprise.getWorkQueue().getHospitalAdminToBank()){
+        for (HospitalToBank request : enterprise.getWorkQueue().getHospitalAdminBank()){
             Object[] row = new Object[4];
             row[0] = request;
-            row[1] = request.getBirthMother().getHospital();
+            row[1] = request.getMother().getHospital();
             
-            row[2] = request.getBirthMother().getFirstName();
+            row[2] = request.getMother().getFirstName();
             row[3] = request.getStatus();
             
             

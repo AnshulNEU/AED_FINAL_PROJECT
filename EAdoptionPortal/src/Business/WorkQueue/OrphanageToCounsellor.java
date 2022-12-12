@@ -14,9 +14,9 @@ import Business.People.Orphanage;
  */
 public class OrphanageToCounsellor extends WorkRequests{
     
-    private String requestResult;
+    private String reqResult;
     private Orphanage orphanage;
-    private String counsellorFeeback;
+    private String counsellorFeedback;
     private Counselor counsellor;
 
     public OrphanageToCounsellor() {
@@ -25,17 +25,17 @@ public class OrphanageToCounsellor extends WorkRequests{
 
     public OrphanageToCounsellor(Orphanage orphanage) {
         super();
-        this.requestResult = new String();
+        this.reqResult = new String();
         this.orphanage = orphanage;
-        this.counsellorFeeback = new String();
+        this.counsellorFeedback = new String();
     }
 
-    public String getRequestResult() {
-        return requestResult;
+    public String getReqResult() {
+        return reqResult;
     }
 
-    public void setRequestResult(String requestResult) {
-        this.requestResult = requestResult;
+    public void setReqResult(String reqResult) {
+        this.reqResult = reqResult;
     }
 
     public Orphanage getOrphanage() {
@@ -46,12 +46,12 @@ public class OrphanageToCounsellor extends WorkRequests{
         this.orphanage = orphanage;
     }
 
-    public String getCounsellorFeeback() {
-        return counsellorFeeback;
+    public String getCounsellorFeedback() {
+        return counsellorFeedback;
     }
 
-    public void setCounsellorFeeback(String counsellorFeeback) {
-        this.counsellorFeeback = counsellorFeeback;
+    public void setCounsellorFeedback(String counsellorFeedback) {
+        this.counsellorFeedback = counsellorFeedback;
     }
 
     public Counselor getCounsellor() {

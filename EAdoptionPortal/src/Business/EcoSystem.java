@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class EcoSystem extends Organization{
     
     private static EcoSystem system;
-    private ArrayList<Networking> networkList;
+    private ArrayList<Networking> netList;
     public static EcoSystem getInstance(){
         if(system==null){
             system=new EcoSystem();
@@ -28,12 +28,12 @@ public class EcoSystem extends Organization{
     
     private EcoSystem(){
         super(null);
-        networkList=new ArrayList<Networking>();
+        netList=new ArrayList<Networking>();
     }
     
     public Networking createAndAddNetwork(){
         Networking network=new Networking();
-        networkList.add(network);
+        netList.add(network);
         return network;
     }
     
@@ -48,18 +48,18 @@ public class EcoSystem extends Organization{
     
     
     public ArrayList<Networking> getNetworkList() {
-        return networkList;
+        return netList;
     }
     
     public Networking addNetwork()
     {
         Networking network = new Networking();
-        networkList.add(network);
+        netList.add(network);
         return network;
     }
 
-    public void setNetworkList(ArrayList<Networking> networkList) {
-        this.networkList = networkList;
+    public void setNetworkList(ArrayList<Networking> netList) {
+        this.netList = netList;
     }
     
     public boolean checkIfUserIsUnique(String userName){

@@ -47,7 +47,7 @@ public class BirthMotherProfile extends javax.swing.JPanel {
         this.userProcessContainer = userProcessContainer;
         addInputVerifiers();
         txtUsername.setText(BirthMother.getUsername());
-        txtEmail.setText(BirthMother.getEmailId());
+        txtEmail.setText(BirthMother.getEmailID());
         txtFirstName.setText(BirthMother.getFirstName());
         txtLastName.setText(BirthMother.getLastName());
         txtBloodGroup.setText(BirthMother.getBloodGroup());
@@ -330,13 +330,13 @@ public class BirthMotherProfile extends javax.swing.JPanel {
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
         int count = 0;
-        for (BirthMother mother : org.getBirthMotherDirectory().getBirthMotherList()){
+        for (BirthMother mother : org.getBirthMotherDirectory().getBirthMotherDir()){
             if (mother.getUsername().equals(BirthMother.getUsername())){
 
                 BirthMother.setUsername(txtUsername.getText());
                 BirthMother.setFirstName(txtFirstName.getText());
                 BirthMother.setLastName(txtLastName.getText());
-                BirthMother.setEmailId(txtEmail.getText());
+                BirthMother.setEmailID(txtEmail.getText());
                 BirthMother.setBloodGroup(txtBloodGroup.getText());
                 //BirthMother.setBankBalance(Integer.parseInt(txtContact.getText()));
                 BirthMother.setContactMother(txtContact.getText());

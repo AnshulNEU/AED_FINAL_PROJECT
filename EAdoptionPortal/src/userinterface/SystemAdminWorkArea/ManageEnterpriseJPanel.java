@@ -43,7 +43,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
 
         model.setRowCount(0);
         for (Networking network : system.getNetworkList()) {
-            for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
+            for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseDir()) {
                 Object[] row = new Object[3];
                 row[0] = enterprise.getName();
                 row[1] = network.getName();

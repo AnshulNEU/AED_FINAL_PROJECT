@@ -273,7 +273,7 @@ public class registerMother extends javax.swing.JPanel {
         }
       
       // BirthMother in people created
-        birthMother.setEmailId(emailId);
+        birthMother.setEmailID(emailId);
         birthMother.setHospital(hospital.getName());
         birthMother.setPassword(password);
         birthMother.setUsername(username);
@@ -286,13 +286,13 @@ public class registerMother extends javax.swing.JPanel {
         
             Random rand = new Random(); 
             Counselor c = new Counselor();
-            for (Organization o : hospital.getOrganizationDirectory().getOrganizationList()){
+            for (Organization o : hospital.getOrganizationalDirectory().getOrganizationList()){
                 if (o.getName().equals(Organization.Type.Counselor.getValue())){
                    
                     
-                   int size = o.getEmployeeDirectory().getCounselorlist().size();
-                   c = o.getEmployeeDirectory().getCounselorlist().get(rand.nextInt(size)); 
-                   birthMother.setCounselor(c.getName());
+                   int size = o.getEmployeeDirectory().getCounselorDir().size();
+                   c = o.getEmployeeDirectory().getCounselorDir().get(rand.nextInt(size)); 
+                   birthMother.setCounsellor(c.getEmpName());
                    o.getBirthMotherDirectory().addBirthMother(birthMother);
                 }
         }
@@ -304,7 +304,7 @@ public class registerMother extends javax.swing.JPanel {
         
 
         String message =  " <h1>Welcome To Child Adoption center</h1> <body>  Your Registration is successful <br>You have been alloted Counselor :"
-                + c.getName() + " at "+ c.getAvailableTime() + "</br>"+"<br>Your Patient ID is " + birthMother.getId()
+                + c.getEmpName() + " at "+ c.getAvailableTime() + "</br>"+"<br>Your Patient ID is " + birthMother.getId()
                 + "</br> <br> Kindly contact wait for your Counselor to contact you for your appointment details!</br> </body> <h2> Thank you! </h2>";
        
         EmailGenerator em = new EmailGenerator(emailId, message, " Registration Successful at Adoption center" );
@@ -343,7 +343,7 @@ public class registerMother extends javax.swing.JPanel {
         //hospitalJComboBox.removeAllItems();
         hospitalJComboBox.removeAllItems();
         for(Networking n: system.getNetworkList()){
-            for(Enterprise e: n.getEnterpriseDirectory().getEnterpriseList()){
+            for(Enterprise e: n.getEnterpriseDirectory().getEnterpriseDir()){
                 if(e.getEnterpriseType().equals(Enterprise.EnterpriseType.Hospital)){
                     hospitalJComboBox.addItem(e);
                 }    

@@ -12,19 +12,19 @@ import java.util.ArrayList;
  * @author hrishikeshwarrier
  */
 public class LoanDirectory {
-        private ArrayList<LoanAccount> loanList;
+        private ArrayList<LoanAccount> loanedList;
 
     public LoanDirectory() {
-        loanList = new ArrayList();
+        loanedList = new ArrayList();
     }
 
     public ArrayList<LoanAccount> getLoanAccountList() {
-        return loanList;
+        return loanedList;
     }
     
     
     public LoanAccount addLoan(LoanAccount loan){
-        loanList.add(loan);
+        loanedList.add(loan);
         return loan;
     }
 }

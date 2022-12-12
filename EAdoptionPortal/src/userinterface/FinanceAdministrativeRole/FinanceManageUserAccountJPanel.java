@@ -45,7 +45,7 @@ public class FinanceManageUserAccountJPanel extends javax.swing.JPanel {
     public void popOrganizationComboBox() {
         organizationJComboBox.removeAllItems();
 
-        for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
+        for (Organization organization : enterprise.getOrganizationalDirectory().getOrganizationList()) {
             organizationJComboBox.addItem(organization);
         }
     }
@@ -63,13 +63,13 @@ public class FinanceManageUserAccountJPanel extends javax.swing.JPanel {
          
        if(organization.getName().equals("BankManager Organization"))       
           {
-          for (Banker employee : organization.getEmployeeDirectory().getBankManagerList()){
+          for (Banker employee : organization.getEmployeeDirectory().getBankManagerDir()){
             employeeJComboBox.addItem(employee);   
           }
         }
        if(organization.getName().equals("InsuranceManager Organization"))       
           {
-          for (InsuranceManager employee : organization.getEmployeeDirectory().getInsuranceManagerList()){
+          for (InsuranceManager employee : organization.getEmployeeDirectory().getInsuranceManagerDir()){
             employeeJComboBox.addItem(employee);   
           }
         }
@@ -88,11 +88,11 @@ public class FinanceManageUserAccountJPanel extends javax.swing.JPanel {
 
         model.setRowCount(0);
 
-        for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
-            for (UserAcc ua : organization.getUserAccountDirectory().getUserAccountList()) {
+        for (Organization organization : enterprise.getOrganizationalDirectory().getOrganizationList()) {
+            for (UserAcc userAcc : organization.getUserAccountDirectory().getUserAccList()) {
                 Object row[] = new Object[2];
-                row[0] = ua;
-                row[1] = ua.getRole().toString();
+                row[0] = userAcc;
+                row[1] = userAcc.getRole().toString();
                 ((DefaultTableModel) userJTable.getModel()).addRow(row);
             }
         }
@@ -297,9 +297,9 @@ public class FinanceManageUserAccountJPanel extends javax.swing.JPanel {
         } 
         
         Role role = (Role) roleJComboBox.getSelectedItem();
-        for(UserAcc ua : organization.getUserAccountDirectory().getUserAccountList())
+        for(UserAcc userAcc : organization.getUserAccountDirectory().getUserAccList())
         {
-            if(userName.equalsIgnoreCase(ua.getUsername()))
+            if(userName.equalsIgnoreCase(userAcc.getUsername()))
             {
             JOptionPane.showMessageDialog(null, "User Name already exists!!", "warning", JOptionPane.WARNING_MESSAGE);  
             return;

@@ -22,7 +22,7 @@ public class Parents {
     private int remainingFunds;
 
     private String address;
-    private String counselor;
+    private String counsellor;
     private String lawyer;
     private int currentFunds;
     private String username;
@@ -30,15 +30,15 @@ public class Parents {
     private int parentId;
     private boolean isAvailable;
     private static int count = new Random().nextInt(100);
-    private String email;
+    private String emailID;
     private String password;
-    private boolean worstCaseScenerio;
+    private boolean worstCaseScenario;
     private boolean finChild;
     private boolean bigChanges;
     private boolean comSituation;
-    private boolean currChildrenOnBoard;
+    private boolean currentChildrenOnBoard;
     private boolean eduRealities;
-    private boolean promises;
+    private boolean promise;
     private boolean guilt;
     private String contactParent;
 
@@ -135,24 +135,24 @@ public class Parents {
     public Parents(String username, String email, String password, boolean worstCaseScenerio, boolean finChild, boolean bigChanges, boolean comSituation, boolean currChildrenOnBoard, boolean eduRealities, boolean promises, boolean guilt) {
         parentId = count;
         count++;
-        this.email = email;
+        this.emailID = email;
         this.password = password;
         this.username = username;
         this.bigChanges = bigChanges;
         this.comSituation = comSituation;
-        this.currChildrenOnBoard = currChildrenOnBoard;
+        this.currentChildrenOnBoard = currChildrenOnBoard;
         this.eduRealities = eduRealities;
         this.finChild = finChild;
         this.guilt = guilt;
-        this.promises = promises;
-        this.worstCaseScenerio = worstCaseScenerio;
-        this.counselor = new String();
+        this.promise = promises;
+        this.worstCaseScenario = worstCaseScenerio;
+        this.counsellor = new String();
         this.lawyer = new String();
         this.isAvailable = false;
     }
 
-    public String getEmail() {
-        return email;
+    public String getEmailID() {
+        return emailID;
     }
 
     public String getLawyer() {
@@ -163,24 +163,24 @@ public class Parents {
         this.lawyer = lawyer;
     }
 
-    public String getCounselor() {
-        return counselor;
+    public String getCounsellor() {
+        return counsellor;
     }
 
-    public void setCounselor(String counselor) {
-        this.counselor = counselor;
+    public void setCounsellor(String counsellor) {
+        this.counsellor = counsellor;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setEmailID(String emailID) {
+        this.emailID = emailID;
     }
 
-    public boolean isWorstCaseScenerio() {
-        return worstCaseScenerio;
+    public boolean isWorstCaseScenario() {
+        return worstCaseScenario;
     }
 
-    public void setWorstCaseScenerio(boolean worstCaseScenerio) {
-        this.worstCaseScenerio = worstCaseScenerio;
+    public void setWorstCaseScenario(boolean worstCaseScenario) {
+        this.worstCaseScenario = worstCaseScenario;
     }
 
     public boolean isFinChild() {
@@ -215,12 +215,12 @@ public class Parents {
         this.comSituation = comSituation;
     }
 
-    public boolean isCurrChildrenOnBoard() {
-        return currChildrenOnBoard;
+    public boolean isCurrentChildrenOnBoard() {
+        return currentChildrenOnBoard;
     }
 
-    public void setCurrChildrenOnBoard(boolean currChildrenOnBoard) {
-        this.currChildrenOnBoard = currChildrenOnBoard;
+    public void setCurrentChildrenOnBoard(boolean currentChildrenOnBoard) {
+        this.currentChildrenOnBoard = currentChildrenOnBoard;
     }
 
     public boolean isEduRealities() {
@@ -231,12 +231,12 @@ public class Parents {
         this.eduRealities = eduRealities;
     }
 
-    public boolean isPromises() {
-        return promises;
+    public boolean isPromise() {
+        return promise;
     }
 
-    public void setPromises(boolean promises) {
-        this.promises = promises;
+    public void setPromise(boolean promise) {
+        this.promise = promise;
     }
 
     public boolean isGuilt() {
@@ -250,18 +250,18 @@ public class Parents {
     public Parents() {
         parentId = count;
         count++;
-        this.email =new String();
+        this.emailID =new String();
         this.password = new String();
         this.username = new String();
         this.bigChanges = false;
         this.comSituation = false;
-        this.currChildrenOnBoard = false;
+        this.currentChildrenOnBoard = false;
         this.eduRealities = false;
         this.finChild = false;
         this.guilt = false;
-        this.promises = false;
-        this.worstCaseScenerio = false; 
-        this.counselor = new String();
+        this.promise = false;
+        this.worstCaseScenario = false; 
+        this.counsellor = new String();
         this.isAvailable = false;
         
     }
@@ -283,7 +283,7 @@ public class Parents {
         this.username = username;
         this.firstName = firstName;
         this.lastName = LastName;
-        this.email = email;
+        this.emailID = email;
         this.bloodGroup = blood;
         this.funds = funds;
         this.address = address;

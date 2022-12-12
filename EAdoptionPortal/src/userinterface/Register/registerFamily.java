@@ -541,15 +541,15 @@ public class registerFamily extends javax.swing.JPanel {
         }
         
         for (Networking n : system.getNetworkList()){
-            for (Enterprise e : n.getEnterpriseDirectory().getEnterpriseList()){
+            for (Enterprise e : n.getEnterpriseDirectory().getEnterpriseDir()){
                 if (e.getEnterpriseType().equals(Enterprise.EnterpriseType.Hospital)){
-                    for(UserAcc ua : e.getUserAccountDirectory().getUserAccountList()){
-                        if(ua.getUsername().equals(username)){
+                    for(UserAcc userAcc : e.getUserAccountDirectory().getUserAccList()){
+                        if(userAcc.getUsername().equals(username)){
                              JOptionPane.showMessageDialog(null, "User Name already exists!, Please Enter valid user name","warning", JOptionPane.WARNING_MESSAGE);
                              return;  
                         }
-                            for(Organization o : e.getOrganizationDirectory().getOrganizationList()){  
-                                for(UserAcc ua1 : o.getUserAccountDirectory().getUserAccountList()){ 
+                            for(Organization o : e.getOrganizationalDirectory().getOrganizationList()){  
+                                for(UserAcc ua1 : o.getUserAccountDirectory().getUserAccList()){ 
                                     if(ua1.getUsername().equals(username)){
                                         JOptionPane.showMessageDialog(null, "User Name already exists!, Please Enter valid user name","warning", JOptionPane.WARNING_MESSAGE);
                                         return;  
@@ -566,7 +566,7 @@ public class registerFamily extends javax.swing.JPanel {
                          finChild, bigChanges, comSituation, currChildrenOnBoard, eduRealities, promises, guilt );
         hospital.getParentDirectory().addParents(parent);
         parentToCounselor = new ParentsToCounsellor("Please review the parent profile", parent);
-        hospital.getWorkQueue().getParentToCounselor().add(parentToCounselor);
+        hospital.getWorkQueue().getParentCounselor().add(parentToCounselor);
        
         String message =  " <h1>Welcome To Child Adoption Center</h1> <body>  <br>Your Registration is successful! </br> <br>Your Profile ID is " + parent.getParentId()
                 + "and your Userid: "+parent.getUsername()+"</br> <br> Kindly wait for your Counselor to review your details!</br> </body> <h2> Thank you! </h2>";
@@ -635,7 +635,7 @@ private void populateComboBox() {
         //hospitalJComboBox.removeAllItems();
         hospitalJComboBox.removeAllItems();
         for(Networking n: system.getNetworkList()){
-            for(Enterprise e: n.getEnterpriseDirectory().getEnterpriseList()){
+            for(Enterprise e: n.getEnterpriseDirectory().getEnterpriseDir()){
                 if(e.getEnterpriseType().equals(Enterprise.EnterpriseType.Hospital)){
                     hospitalJComboBox.addItem(e);
                 }    

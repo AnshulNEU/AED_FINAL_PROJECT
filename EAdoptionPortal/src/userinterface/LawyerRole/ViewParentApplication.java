@@ -370,9 +370,9 @@ public class ViewParentApplication extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
     private void fillComponents(){
         txtUsername.setText(request.getParent().getUsername());
-        txtEmail.setText(request.getParent().getEmail());
+        txtEmail.setText(request.getParent().getEmailID());
         
-        if(this.request.getParent().isWorstCaseScenerio() == true){
+        if(this.request.getParent().isWorstCaseScenario() == true){
             isPrepared.setSelected(true);
         }
         else
@@ -396,7 +396,7 @@ public class ViewParentApplication extends javax.swing.JPanel {
         else
            notComfortable.setSelected(true);
         
-        if(this.request.getParent().isCurrChildrenOnBoard() == true){
+        if(this.request.getParent().isCurrentChildrenOnBoard() == true){
             isChildrenOnBoard.setSelected(true);
         }
         else
@@ -408,7 +408,7 @@ public class ViewParentApplication extends javax.swing.JPanel {
         else
            notEducated.setSelected(true);
         
-        if(this.request.getParent().isPromises() == true){
+        if(this.request.getParent().isPromise() == true){
             isPromise.setSelected(true);
         }
         else
@@ -427,8 +427,8 @@ public class ViewParentApplication extends javax.swing.JPanel {
         request.setMessage("Accepted");
         request.setResolveDate(new Date());
         request.setStatus("Completed");
-        request.getParent().setLawyer(account.getLawyer().getName());
-        request.setRequestResult("Completed");
+        request.getParent().setLawyer(account.getLawyer().getEmpName());
+        request.setReqResult("Completed");
         String msg = messageTxt.getText();
         if(msg.equals("")){
               JOptionPane.showMessageDialog(null, "Please input your message for the parent to be reviewed by admin ");
@@ -439,7 +439,7 @@ public class ViewParentApplication extends javax.swing.JPanel {
         lawyerReq.setStatus("Processing");
         lawyerReq.setSender(account);
         
-        enterprise.getWorkQueue().getLawyerToAdmin().add(lawyerReq);
+        enterprise.getWorkQueue().getLawyerAdmin().add(lawyerReq);
         
         
         userProcessContainer.remove(this);
@@ -461,7 +461,47 @@ public class ViewParentApplication extends javax.swing.JPanel {
 
     private void btnRejectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRejectActionPerformed
         // TODO add your handling code here:
+//        request.setReceiver(account);
+//        request.setMessage("Rejected");
+//        request.setResolveDate(new Date());
+//        request.setStatus("Rejected");
+//        request.getParent().setLawyer(account.getLawyer().getEmpName());
+//        request.setReqResult("Completed");
+//        String msg = messageTxt.getText();
+//        if(msg.equals("")){
+//              JOptionPane.showMessageDialog(null, "Please input your message for the parent to be reviewed by admin ");
+//              throw new NullPointerException("Enter message");
+//        }
+//        
+//        LawyerToAdmin lawyerReq = new LawyerToAdmin(messageTxt.getText(), request.getParent());
+//        lawyerReq.setStatus("Processing");
+//        lawyerReq.setSender(account);
+//        
+//        enterprise.getWorkQueue().getLawyerAdmin().add(lawyerReq);
         
+        request.setReceiver(account);
+        request.setReqResult("Rejected by " + account.getLawyer().getEmpName());
+        request.setResolveDate(new Date());
+		
+        request.setStatus("Rejected");
+        request.getParent().setLawyer(account.getLawyer().getEmpName());
+        String msg = messageTxt.getText();
+        if(msg.equals("")){
+              JOptionPane.showMessageDialog(null, "Please input your message for the parent to be reviewed by parent ");
+              throw new NullPointerException("Enter message");
+        }
+	//request.setCounsellorFeedback(msg);
+        request.setMessage(msg);
+	request.setSender(account);
+        
+        
+        userProcessContainer.remove(this);
+        Component[] componentArray = userProcessContainer.getComponents();
+        Component component = componentArray[componentArray.length - 1];
+        ParentsRequestWorkAreaJPanel parentRequestWorkArea = (ParentsRequestWorkAreaJPanel) component;
+        parentRequestWorkArea.populateRequestTable();
+        CardLayout layout = (CardLayout)userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
         
     }//GEN-LAST:event_btnRejectActionPerformed
 

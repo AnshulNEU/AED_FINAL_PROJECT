@@ -15,8 +15,8 @@ import java.util.ArrayList;
  * @author nihil
  */
 public class Lawyer extends Employees{
-    private int workRequestCount;
-   private int ratingReviews;
+    private int workRequestCt;
+   private int ratingReview;
    private boolean isAvailable;
    private LocalTime availableTime;
    private ArrayList<BirthMotherLawyer> birthMotherAlloted;
@@ -24,7 +24,7 @@ public class Lawyer extends Employees{
 
     public Lawyer(int ratingReviews, boolean isAvailable, LocalTime availableTime, ArrayList<BirthMotherLawyer> bMA, ArrayList<CounsellorsToLawyer> pA) {
         super();
-        this.ratingReviews = ratingReviews;
+        this.ratingReview = ratingReviews;
         this.isAvailable = isAvailable;
         this.availableTime = availableTime;
         this.birthMotherAlloted = bMA;
@@ -40,20 +40,20 @@ public class Lawyer extends Employees{
     
     
     }
-    public int getWorkRequestCount() {
-        return workRequestCount;
+    public int getWorkRequestCt() {
+        return workRequestCt;
     }
 
-    public void setWorkRequestCount(int workRequestCount) {
-        this.workRequestCount = workRequestCount;
+    public void setWorkRequestCt(int workRequestCt) {
+        this.workRequestCt = workRequestCt;
     }
 
-    public int getRatingReviews() {
-        return ratingReviews;
+    public int getRatingReview() {
+        return ratingReview;
     }
 
-    public void setRatingReviews(int ratingReviews) {
-        this.ratingReviews = ratingReviews;
+    public void setRatingReview(int ratingReview) {
+        this.ratingReview = ratingReview;
     }
 
     public boolean isIsAvailable() {

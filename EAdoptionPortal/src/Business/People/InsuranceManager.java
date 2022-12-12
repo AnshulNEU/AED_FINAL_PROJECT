@@ -13,9 +13,9 @@ import java.util.ArrayList;
  * @author nihil
  */
 public class InsuranceManager extends Employees {
-    public String InsuranceName;
-   public int workRequestcount;
-   public int maxFunding;
+   public String InsuranceName;
+   public int workRequestCt;
+   public int maxFunds;
    public String location;
    
    private ArrayList<BirthMotherLoan> acceptedWorkRequests;
@@ -31,20 +31,20 @@ public class InsuranceManager extends Employees {
 
    
 
-    public int getWorkRequestcount() {
-        return workRequestcount;
+    public int getWorkRequestCt() {
+        return workRequestCt;
     }
 
-    public void setWorkRequestcount(int workRequestcount) {
-        this.workRequestcount = workRequestcount;
+    public void setWorkRequestCt(int workRequestCt) {
+        this.workRequestCt = workRequestCt;
     }
 
-    public int getMaxFunding() {
-        return maxFunding;
+    public int getMaxFunds() {
+        return maxFunds;
     }
 
-    public void setMaxFunding(int maxFunding) {
-        this.maxFunding = maxFunding;
+    public void setMaxFunds(int maxFunds) {
+        this.maxFunds = maxFunds;
     }
 
     public String getLocation() {

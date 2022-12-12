@@ -74,7 +74,7 @@ public class loginOptions extends javax.swing.JPanel {
         btnFamily.setBackground(new java.awt.Color(252, 68, 69));
         btnFamily.setFont(new java.awt.Font("Lucida Grande", 1, 11)); // NOI18N
         btnFamily.setForeground(new java.awt.Color(237, 245, 225));
-        btnFamily.setText("FAMILY");
+        btnFamily.setText("PARENTS");
         btnFamily.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFamilyActionPerformed(evt);

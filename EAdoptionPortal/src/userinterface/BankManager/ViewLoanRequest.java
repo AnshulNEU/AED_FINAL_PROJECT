@@ -44,15 +44,15 @@ public class ViewLoanRequest extends javax.swing.JPanel {
         this.enterprise = enterprise;
    
         
-        txtFirstName.setText(bl.getLoan().getFirstName());
-        txtEmail.setText(bl.getLoan().getEmailId());
+        txtFirstName.setText(bl.getLoanAcc().getFirstName());
+        txtEmail.setText(bl.getLoanAcc().getEmailID());
        
-        txtAddress.setText(bl.getLoan().getAddress());
-        txtFunds.setText(String.valueOf(bl.getLoan().getFunds()));
-        txtPassport.setText(bl.getLoan().getPassportNumber());
-        txtLastName.setText(bl.getLoan().getLastName());
+        txtAddress.setText(bl.getLoanAcc().getAddress());
+        txtFunds.setText(String.valueOf(bl.getLoanAcc().getFund()));
+        txtPassport.setText(bl.getLoanAcc().getPassportNum());
+        txtLastName.setText(bl.getLoanAcc().getLastName());
         //added by hrishikeshwarrierl 12112021
-        profilePhotoComponentLoanMngr.setIcon(new ImageIcon(bl.getLoan().getDocPath())); 
+        profilePhotoComponentLoanMngr.setIcon(new ImageIcon(bl.getLoanAcc().getDoctorPath())); 
         
     }
 
@@ -304,7 +304,7 @@ public class ViewLoanRequest extends javax.swing.JPanel {
 
     private void btnBrowseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBrowseActionPerformed
 
-        if (bl.getLoan().getDocPath() == null || bl.getLoan().getDocPath() == ""){
+        if (bl.getLoanAcc().getDoctorPath() == null || bl.getLoanAcc().getDoctorPath() == ""){
         SwingUtilities.invokeLater(new Runnable(){
             public void run()
                 {
@@ -314,7 +314,7 @@ public class ViewLoanRequest extends javax.swing.JPanel {
                 BufferedImage image = null;
                 try
                 {
-                    image = ImageIO.read(new File(bl.getLoan().getDocPath()));
+                    image = ImageIO.read(new File(bl.getLoanAcc().getDoctorPath()));
                 }
                 catch (Exception e)
                 {
@@ -341,14 +341,14 @@ public class ViewLoanRequest extends javax.swing.JPanel {
     }//GEN-LAST:event_txtFirstNameActionPerformed
 
     private void btnApproveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApproveActionPerformed
-        int accNumber = bl.getLoan().getBankAccountNumber();
+        int accNumber = bl.getLoanAcc().getBankAccountNum();
         for (LoanAccount l : enterprise.getLoanDirectory().getLoanAccountList()){
-            if(accNumber == (l.getBankAccountNumber()))
+            if(accNumber == (l.getBankAccountNum()))
             {
             l.setFundsApproved(Integer.valueOf(txtApprovedAmount.getText()));
             bl.setStatus("Completed");
             bl.getBirthMother().setLoanAmountApproved(Integer.valueOf(txtApprovedAmount.getText()));
-            bl.getBirthMother().setBankBalance(bl.getBirthMother().getBankBalance()+bl.getBirthMother().getLoanAmountApproved());
+            bl.getBirthMother().setBankBal(bl.getBirthMother().getBankBal()+bl.getBirthMother().getLoanAmountApproved());
             JOptionPane.showMessageDialog(this, "Amount of "+ txtApprovedAmount.getText() +" approved");
             
              userProcessContainer.remove(this);

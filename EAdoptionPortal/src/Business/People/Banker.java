@@ -15,8 +15,8 @@ import java.util.ArrayList;
 public class Banker extends Employees{
 
    public String BankName;
-   public int workRequestcount;
-   public int maxFunding;
+   public int workRequestct;
+   public int maxFunds;
    public String location;
    
    private ArrayList<BirthMotherLoan> acceptedWorkRequests;
@@ -26,16 +26,16 @@ public class Banker extends Employees{
     public Banker(String BankName, int workRequestcount, int maxFunding, String location) {
         super();
         this.BankName = BankName;
-        this.workRequestcount = workRequestcount;
-        this.maxFunding = maxFunding;
+        this.workRequestct = workRequestcount;
+        this.maxFunds = maxFunding;
         this.location = location;
     }
     
     public Banker() {
         super();
         this.BankName = new String();
-        this.workRequestcount = new Integer(100);
-        this.maxFunding = new Integer(100);
+        this.workRequestct = new Integer(100);
+        this.maxFunds = new Integer(100);
         this.location = location;
     }
 
@@ -47,20 +47,20 @@ public class Banker extends Employees{
         this.BankName = BankName;
     }
 
-    public int getWorkRequestcount() {
-        return workRequestcount;
+    public int getWorkRequestct() {
+        return workRequestct;
     }
 
-    public void setWorkRequestcount(int workRequestcount) {
-        this.workRequestcount = workRequestcount;
+    public void setWorkRequestct(int workRequestct) {
+        this.workRequestct = workRequestct;
     }
 
-    public int getMaxFunding() {
-        return maxFunding;
+    public int getMaxFunds() {
+        return maxFunds;
     }
 
-    public void setMaxFunding(int maxFunding) {
-        this.maxFunding = maxFunding;
+    public void setMaxFunds(int maxFunds) {
+        this.maxFunds = maxFunds;
     }
 
     public String getLocation() {

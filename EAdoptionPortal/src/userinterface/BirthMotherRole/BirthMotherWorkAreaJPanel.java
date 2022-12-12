@@ -216,7 +216,7 @@ public class BirthMotherWorkAreaJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_viewParentsJButtonActionPerformed
 
     private void viewBankDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewBankDetailsActionPerformed
-        if(BirthMother.getLoanaccount().getBankAccountNumber() == 0){
+        if(BirthMother.getLoanaccount().getBankAccountNum() == 0){
             JOptionPane.showMessageDialog(this, "Please wait for Bank Manager to accept the bank account req");
             return;
         }
@@ -255,7 +255,7 @@ public class BirthMotherWorkAreaJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_btnCreateInsuranceActionPerformed
 
     private void chkBankAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkBankAccountActionPerformed
-       if(BirthMother.getLoanaccount().getBankAccountNumber() == 0){
+       if(BirthMother.getLoanaccount().getBankAccountNum() == 0){
             JOptionPane.showMessageDialog(this, "Please wait for Bank Manager to accept the bank account req");
             return;
         }
@@ -263,7 +263,7 @@ public class BirthMotherWorkAreaJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Please wait for Parent to add aid amount");
             return;
        }
-       if(BirthMother.getOwnFunds() == 0){
+       if(BirthMother.getOwnedFunds() == 0){
             JOptionPane.showMessageDialog(this, "Please add your contribution in View Bank Acccount page");
             return;
        
@@ -278,7 +278,7 @@ public class BirthMotherWorkAreaJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_chkBankAccountActionPerformed
 
     private void chkInsuranceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkInsuranceActionPerformed
-        if(BirthMother.getLoanaccount().getBankAccountNumber() == 0){
+        if(BirthMother.getLoanaccount().getBankAccountNum() == 0){
             JOptionPane.showMessageDialog(this, "Please wait for Bank Manager to accept the bank account req");
             return;
         }
@@ -286,7 +286,7 @@ public class BirthMotherWorkAreaJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Please wait for Parent to add aid amount");
             return;
        }
-       if(BirthMother.getOwnFunds() == 0){
+       if(BirthMother.getOwnedFunds() == 0){
             JOptionPane.showMessageDialog(this, "Please add your contribution in View Bank Acccount page");
             return;
        

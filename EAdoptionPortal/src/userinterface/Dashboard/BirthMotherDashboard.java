@@ -52,7 +52,7 @@ public class BirthMotherDashboard extends javax.swing.JPanel {
     public void chart(){
         int parent;
         try{
-        int self = BirthMother.getOwnFunds();
+        int self = BirthMother.getOwnedFunds();
         if(BirthMother.getFinalizedParent() != null){
             parent = BirthMother.getParentAidfund() - this.parent.getRemainingFunds();
             
@@ -60,7 +60,7 @@ public class BirthMotherDashboard extends javax.swing.JPanel {
         else { parent = 0;}
         int help;
         int loan = BirthMother.getLoanAmountApproved();
-        int insurance = BirthMother.getInsuranceAmount();
+        int insurance = BirthMother.getInsuranceAmt();
         int counselor = BirthMother.getRequiredFund();
         if(loan != 0){
             help = loan;
@@ -106,7 +106,7 @@ public class BirthMotherDashboard extends javax.swing.JPanel {
     private void populateParentDetails(){
         lblName.setText(parent.getFirstName() +" "+ parent.getLastName());
         lblAddress.setText(parent.getAddress());
-        lblEmail.setText(parent.getEmail());
+        lblEmail.setText(parent.getEmailID());
         lblContact.setText(parent.getContactParent());
         parentImg.setIcon(new ImageIcon(parent.getImgPath()));
     }

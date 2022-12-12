@@ -25,7 +25,7 @@ public class UserAcc {
     private Lawyer lawyer;
     private Parents parent;
     private Role role;
-    private WorkQ workQueue;
+    private WorkQ workQ;
     private String network;
 
     public BirthMother getBirthmother() {
@@ -85,7 +85,7 @@ public class UserAcc {
     }
 
     public UserAcc() {
-        workQueue = new WorkQ();
+        workQ = new WorkQ();
         username =  new String();
         network = new String();
         name  = new String();
@@ -132,8 +132,8 @@ public class UserAcc {
         return employee;
     }
 
-    public WorkQ getWorkQueue() {
-        return workQueue;
+    public WorkQ getWorkQ() {
+        return workQ;
     }
 
     

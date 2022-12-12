@@ -13,14 +13,14 @@ import Business.People.Parents;
  */
 public class CounsellorsToLawyer extends WorkRequests{
     
-     private String requestResult;
+     private String reqResult;
      private Parents parent;
      
      public CounsellorsToLawyer(String message, Parents parent) {
         super();
         super.setMessage(message);
         super.setStatus("Pending");
-        this.requestResult = new String();
+        this.reqResult = new String();
         this.parent = parent;
     }
     public Parents getParent() {
@@ -32,15 +32,15 @@ public class CounsellorsToLawyer extends WorkRequests{
     }
 
     public CounsellorsToLawyer(String requestResult) {
-        this.requestResult = requestResult;
+        this.reqResult = requestResult;
     }
 
-    public String getRequestResult() {
-        return requestResult;
+    public String getReqResult() {
+        return reqResult;
     }
 
-    public void setRequestResult(String requestResult) {
-        this.requestResult = requestResult;
+    public void setReqResult(String reqResult) {
+        this.reqResult = reqResult;
     }
      
     @Override

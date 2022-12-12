@@ -45,10 +45,10 @@ public class ParentsRequestWorkAreaJPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) workRequestJTable.getModel();
         
         model.setRowCount(0);
-        for (ParentsToCounsellor request : enterprise.getWorkQueue().getParentToCounselor()){
+        for (ParentsToCounsellor request : enterprise.getWorkQueue().getParentCounselor()){
             Object[] row = new Object[4];
             row[0] = request;
-            row[1] = request.getParent().getEmail();
+            row[1] = request.getParent().getEmailID();
             row[2] = request.getStatus();
             UserAcc result = request.getReceiver();
             row[3] = result == null ? "Waiting" : result;
@@ -188,12 +188,12 @@ public class ParentsRequestWorkAreaJPanel extends javax.swing.JPanel {
             return;
         }
         ParentsToCounsellor request = (ParentsToCounsellor)workRequestJTable.getValueAt(selectedRow, 0);
-        if (request.getRequestResult().equals("Completed")){
+        if (request.getReqResult().equals("Completed")){
                 JOptionPane.showMessageDialog(null, "Already Completed!");
             
         }
         
-        if(request.getRequestResult().equals("")){
+        if(request.getReqResult().equals("")){
                
                 CardLayout layout = (CardLayout) userProcessContainer.getLayout();
                 userProcessContainer.add("viewParentApplication", new ViewParentApplication(userProcessContainer, request, userAccount, enterprise,system));

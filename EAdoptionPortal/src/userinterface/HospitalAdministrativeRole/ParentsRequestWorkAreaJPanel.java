@@ -54,15 +54,15 @@ public class ParentsRequestWorkAreaJPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) workRequestJTable.getModel();
         model.setRowCount(0);
           for(Networking N: system.getNetworkList()){
-            for(Enterprise e:N.getEnterpriseDirectory().getEnterpriseList()){
+            for(Enterprise e:N.getEnterpriseDirectory().getEnterpriseDir()){
             if(e.getEnterpriseType().getValue().equals(Enterprise.EnterpriseType.LegalEnterprise.getValue())){
-                 for (LawyerToAdmin request : e.getWorkQueue().getLawyerToAdmin()){
+                 for (LawyerToAdmin request : e.getWorkQueue().getLawyerAdmin()){
                                     if(!(request.getParent().getUsername().equals(""))){
                                             Object[] row = new Object[4];
                                             row[0] = request;
                                             row[1] = request.getParent().getUsername();
                                             row[2] = request.getStatus();
-                                            String result = request.getRequestResult();
+                                            String result = request.getReqResult();
                                             row[3] = result == null ? "Waiting" : result;
 
                                             model.addRow(row);
@@ -291,9 +291,9 @@ public class ParentsRequestWorkAreaJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(this, "Please enter comments for the operation!");
             return;
         }
-        for (Organization org : enterprise.getOrganizationDirectory().getOrganizationList()){
+        for (Organization org : enterprise.getOrganizationalDirectory().getOrganizationList()){
             if(org.getName().equals("Parents Organization")){
-               for(UserAcc u :org.getUserAccountDirectory().getUserAccountList()){
+               for(UserAcc u :org.getUserAccountDirectory().getUserAccList()){
                    if(u.getUsername().equals(request.getParent().getUsername())){
                        JOptionPane.showMessageDialog(this, "User Account already created");
                        return;
@@ -306,12 +306,12 @@ public class ParentsRequestWorkAreaJPanel extends javax.swing.JPanel {
         request.setMessage(txtMessage.getText());
         request.setStatus("Completed");
         request.setResolveDate(new Date());
-        request.setRequestResult("User Account created");
+        request.setReqResult("User Account created");
       
         parent = request.getParent();
         Role role = new ParentsRole();
         
-        for (Organization org : enterprise.getOrganizationDirectory().getOrganizationList()){
+        for (Organization org : enterprise.getOrganizationalDirectory().getOrganizationList()){
             if(org.getName().equals("Parents Organization")){
                 org.getParentDirectory().addParents(parent);
                 org.getUserAccountDirectory().createUserAccountParents(request.getParent().getUsername(),request.getParent().getPassword() , parent , role, account.getNetwork());
@@ -322,7 +322,7 @@ public class ParentsRequestWorkAreaJPanel extends javax.swing.JPanel {
                 + request.getParent().getUsername() + "</br> <br> Pssword:  "+ request.getParent().getPassword() + "</br>"+"<br>Your Patient ID is " + request.getParent().getParentId()
                 + "</br> <br> Kindly update your profile by logging into our Application ! </br> </body> <h2> Thank you! </h2>";
 
-        EmailGenerator em = new EmailGenerator(request.getParent().getEmail(), message , "Request Approved" );
+        EmailGenerator em = new EmailGenerator(request.getParent().getEmailID(), message , "Request Approved" );
         em.sendEmail();
         
         SuccessDialog d = new SuccessDialog("Family account created successfully.");

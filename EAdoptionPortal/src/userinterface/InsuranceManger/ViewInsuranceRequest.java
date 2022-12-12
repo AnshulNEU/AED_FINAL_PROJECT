@@ -50,12 +50,12 @@ public class ViewInsuranceRequest extends javax.swing.JPanel {
         this.birthmother = insuranceRequest.getBirthMother();
      
         txtFirstName.setText(insuranceRequest.getInsurance().getFirstName());
-        txtEmail.setText(insuranceRequest.getInsurance().getEmailId());
+        txtEmail.setText(insuranceRequest.getInsurance().getEmailID());
         txtAddress.setText(insuranceRequest.getInsurance().getAddress());  
         txtFunds.setText(String.valueOf(insuranceRequest.getBirthMother().getRequiredFund()));
-        txtPolicy.setText(String.valueOf(insuranceRequest.getInsurance().getPolicyNumber()));
+        txtPolicy.setText(String.valueOf(insuranceRequest.getInsurance().getPolicyNum()));
         txtLastName.setText(insuranceRequest.getInsurance().getLastName());
-        profilePhotoComponent.setIcon(new ImageIcon(insuranceRequest.getInsurance().getDocPath())); 
+        profilePhotoComponent.setIcon(new ImageIcon(insuranceRequest.getInsurance().getDoctorPath())); 
         
     }
 
@@ -308,10 +308,10 @@ public class ViewInsuranceRequest extends javax.swing.JPanel {
 
     private void btnApproveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApproveActionPerformed
         String firstname = insuranceRequest.getInsurance().getFirstName();
-        for (InsuranceAccount l : enterprise.getInsuranceAccountDirectory().getInsuranceList()){
+        for (InsuranceAccount l : enterprise.getInsuranceAccountDirectory().getInsuranceDir()){
             if(firstname.equals(l.getFirstName()))
             {l.setFundsApproved(Integer.valueOf(txtApprovedAmount.getText()));
-             birthmother.setInsuranceAmount(Integer.valueOf(txtApprovedAmount.getText()));
+             birthmother.setInsuranceAmt(Integer.valueOf(txtApprovedAmount.getText()));
              insuranceRequest.setStatus("Completed");
              SuccessDialog d = new SuccessDialog("Amount "+ l.getFundsApproved()+ " approved ");
                 d.setVisible(true);

@@ -48,7 +48,7 @@ public class BirthMotherRequestWorkAreaJPanel extends javax.swing.JPanel {
         
         model.setRowCount(0);
         for (BirthMotherCounselor request : enterprise.getWorkQueue().getBirthMotherToCounsellor()){
-            if(request.getCounsellor().getName().equals(account.getCounselor().getName())){
+            if(request.getCounsellor().getEmpName().equals(account.getCounselor().getEmpName())){
             Object[] row = new Object[5];
             row[0] = request;
             row[1] = request.getMessage();

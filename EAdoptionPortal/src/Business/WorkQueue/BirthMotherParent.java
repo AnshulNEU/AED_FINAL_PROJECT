@@ -14,7 +14,7 @@ import Business.People.Parents;
  */
 public class BirthMotherParent extends WorkRequests{
    
-    private String requestResult;
+    private String reqResult;
     private BirthMother mother;
  
     private Parents parent;
@@ -22,7 +22,7 @@ public class BirthMotherParent extends WorkRequests{
     public BirthMotherParent(BirthMother BM, Parents p) {
 
         super();
-        this.requestResult = new String();
+        this.reqResult = new String();
         this.mother = BM;
         this.parent = p;
     }
@@ -35,12 +35,12 @@ public class BirthMotherParent extends WorkRequests{
         this.mother = m;
     }
 
-    public String getRequestResult() {
-        return requestResult;
+    public String getReqResult() {
+        return reqResult;
     }
 
-    public void setRequestResult(String requestResult) {
-        this.requestResult = requestResult;
+    public void setReqResult(String reqResult) {
+        this.reqResult = reqResult;
     }
 
     public Parents getParent() {

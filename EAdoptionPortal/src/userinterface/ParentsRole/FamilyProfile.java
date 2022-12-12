@@ -46,7 +46,7 @@ public class FamilyProfile extends javax.swing.JPanel {
         this.org = org;
         this.userProcessContainer = userProcessContainer;
         txtUsername.setText(parent.getUsername());
-        txtEmail.setText(parent.getEmail());
+        txtEmail.setText(parent.getEmailID());
         txtFirstName.setText(parent.getFirstName());
         txtLastName.setText(parent.getLastName());
         txtBloodGroup.setText(parent.getBloodGroup());
@@ -415,14 +415,14 @@ public class FamilyProfile extends javax.swing.JPanel {
          //  }
            
            
-        for (Parents parent : org.getParentDirectory().getParentsList()){
+        for (Parents parent : org.getParentDirectory().getParentsDir()){
             if (this.parent.getUsername().equals(parent.getUsername())){
 
                 
                 parent.setUsername(txtUsername.getText());
                 parent.setFirstName(txtFirstName.getText());
                 parent.setLastName(txtLastName.getText());
-                parent.setEmail(txtEmail.getText());
+                parent.setEmailID(txtEmail.getText());
                 parent.setBloodGroup(txtBloodGroup.getText());
                 parent.setFunds(Integer.valueOf(txtFunds.getText()));
                 parent.setAddress(txtAddress.getText());

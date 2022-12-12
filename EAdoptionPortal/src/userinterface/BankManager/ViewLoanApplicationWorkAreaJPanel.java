@@ -46,11 +46,11 @@ public class ViewLoanApplicationWorkAreaJPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) workRequestJTable.getModel();
         
         model.setRowCount(0);
-        for (BirthMotherLoan request : enterprise.getWorkQueue().getBirthMotherToLoan()){
+        for (BirthMotherLoan request : enterprise.getWorkQueue().getBirthMotherLoan()){
             Object[] row = new Object[4];
             row[0] = request;
-            row[1] = request.getLoan().getHospital();
-            row[2] = request.getLoan().getFunds();
+            row[1] = request.getLoanAcc().getHospital();
+            row[2] = request.getLoanAcc().getFund();
             row[3] = request.getStatus();
             
             model.addRow(row);

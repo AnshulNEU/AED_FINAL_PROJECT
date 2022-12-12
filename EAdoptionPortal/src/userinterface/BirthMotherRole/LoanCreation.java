@@ -51,7 +51,7 @@ public class LoanCreation extends javax.swing.JPanel {
         txtFirstName.setText(BirthMother.getFirstName());
         txtLastName.setText(BirthMother.getLastName());
         txtAddress.setText(BirthMother.getAddress());
-        txtEmail.setText(BirthMother.getEmailId());
+        txtEmail.setText(BirthMother.getEmailID());
         
     }
 
@@ -339,7 +339,7 @@ public class LoanCreation extends javax.swing.JPanel {
         for(Networking network: system.getNetworkList()){
             if(network.getName().equals(userAccount.getNetwork()))
             {
-                for(Enterprise e : network.getEnterpriseDirectory().getEnterpriseList()){
+                for(Enterprise e : network.getEnterpriseDirectory().getEnterpriseDir()){
                     if(e.getEnterpriseType().equals(Enterprise.EnterpriseType.FinancialEnterprise))
                     {
                         for(LoanAccount l : e.getLoanDirectory().getLoanAccountList())
@@ -364,7 +364,7 @@ public class LoanCreation extends javax.swing.JPanel {
         motherLoan.setRequestDate(new Date());
         BirthMother.setTypeL(1);
         
-        enterprise.getWorkQueue().getBirthMotherToLoan().add(motherLoan);
+        enterprise.getWorkQueue().getBirthMotherLoan().add(motherLoan);
        
         SuccessDialog d = new SuccessDialog("Successfully initiate Loan Process");
         d.setVisible(true);       

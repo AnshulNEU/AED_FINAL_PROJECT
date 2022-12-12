@@ -48,9 +48,9 @@ public class ViewBankAccountDetailsJPanel extends javax.swing.JPanel {
         for (LoanAccount request : enterprise.getLoanDirectory().getLoanAccountList()){
             Object[] row = new Object[4];
             row[0] = request;
-            row[1] = request.getEmailId();
-            row[2] = request.getBankBalance();
-            row[3] = request.getBankAccountNumber();
+            row[1] = request.getEmailID();
+            row[2] = request.getBankBal();
+            row[3] = request.getBankAccountNum();
             
             model.addRow(row);
         }

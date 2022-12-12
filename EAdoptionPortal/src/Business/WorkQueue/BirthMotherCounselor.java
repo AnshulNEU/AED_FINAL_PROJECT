@@ -16,7 +16,7 @@ public class BirthMotherCounselor extends WorkRequests{
    
     private String requestResult;
     private BirthMother mother;
-    private String counsellorFeeback;
+    private String counsellorFeedback;
     private Counselor counsellor;
 
     public BirthMotherCounselor() {
@@ -43,7 +43,7 @@ public class BirthMotherCounselor extends WorkRequests{
         super();
         this.requestResult = new String();
         this.mother = BM;
-        this.counsellorFeeback = new String();
+        this.counsellorFeedback = new String();
     }
 
     public BirthMother getBirthMother() {
@@ -54,12 +54,12 @@ public class BirthMotherCounselor extends WorkRequests{
         this.mother = m;
     }
 
-    public String getCounsellorFeeback() {
-        return counsellorFeeback;
+    public String getCounsellorFeedback() {
+        return counsellorFeedback;
     }
 
-    public void setCounsellorFeeback(String counsellorFeeback) {
-        this.counsellorFeeback = counsellorFeeback;
+    public void setCounsellorFeedback(String counsellorFeedback) {
+        this.counsellorFeedback = counsellorFeedback;
     }
 
     public String getRequestResult() {
